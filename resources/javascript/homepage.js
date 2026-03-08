@@ -5,7 +5,7 @@
   // # EDITION PREFERENCE #
   // stores the currently selected edition so the student can be correctly redirected when clicking home links
   if (storageOK) {
-    localStorage.GenkiEdition = '2nd'; ///lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd';
+    localStorage.GenkiEdition = (/^\/?(index\.html)?$|\/lessons-3rd\//.test(window.location.pathname)) ? '3rd' : '2nd';
   }
   
   
@@ -195,7 +195,7 @@
   // # EXERCISE RESULTS #
   // Displays exercise results next to each exercise
   if (storageOK && localStorage.Results) {
-    var exResults = JSON.parse(localStorage.Results)[/lessons-3rd/.test(window.location.pathname) ? '3rd' : '2nd'], k;
+    var exResults = JSON.parse(localStorage.Results)[(/^\/?(index\.html)?$|\/lessons-3rd\//.test(window.location.pathname)) ? '3rd' : '2nd'], k;
 
     for (k in exResults) {
       for (var a = document.querySelectorAll('a[href*="' + k + '/"]'), i = 0, j = a.length; i < j; i++) {
@@ -206,36 +206,4 @@
     }
   }  
   
-  
-  // # RANDOM WORD #
-  // get random word from jisho.js
-  window.KN_RandomWord = function () {
-    if (Genki.jisho) {
-      if (!window.KN_WordList) {
-        var words = [], k;
-
-        // merge all words into a single array
-        for (k in Genki.jisho) {
-          words.push.apply(words, Genki.jisho[k]);
-        }
-
-        window.KN_WordList = words;
-      }
-
-      // get random word and japanese word split into kanji and kana
-      var container = document.getElementById('random-word-content'),
-          word = KN_WordList[Math.floor(Math.random() * KN_WordList.length)],
-          ja = word.ja.split('|');
-
-      // add random word to document
-      if (container) {
-        container.innerHTML = 
-          '<div class="word-ja"><ruby>' + (ja[0]) + '<rt>' + (ja[1] ? ja[1] : '　') + '</rt></ruby></div>'+
-          '<hr>'+
-          '<div class="word-en"><span class="spoiler">' + word.en + '</span></div>';
-      }
-    }
-  };
-
-  window.KN_RandomWord();
 }(window, document));

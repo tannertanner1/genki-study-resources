@@ -4,6 +4,6 @@ color 1F
 
 set /p id="Please press ENTER to generate Kanji Decks for Genki."
 
-python anki_kanji_decks_maker.py ../../lessons-3rd
+python anki_kanji_decks_maker.py /lessons-3rd
 
 pause

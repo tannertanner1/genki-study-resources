@@ -1,11 +1,11 @@
 @font-face {
   font-family:'FontAwesomeWeb';
-  src:url('../fonts/fontawesome-webfont.eot?v=4.7.0');
-  src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
-      url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
-      url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), 
-      url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), 
-      url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src:url('/resources/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src:url('/resources/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+      url('/resources/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+      url('/resources/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+      url('/resources/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+      url('/resources/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight:normal;
   font-style:normal;
 }
@@ -67,11 +67,6 @@
 
 
 /* body/general styles */
-.disabled {
-  opacity:0.5;
-  pointer-events:none;
-}
-
 body {
   color:#333;
   background:#FFF;
@@ -198,7 +193,7 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 .ul { text-decoration:underline; }
 .ul-double {
   text-decoration:underline;
-  position:relative; 
+  position:relative;
 }
 .ul-double:after {
   content:"";
@@ -271,7 +266,7 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 
 /* tables */
 .table {
-  width:100%;  
+  width:100%;
   border-collapse:collapse;
 }
 
@@ -311,7 +306,7 @@ input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:foc
 /* header */
 header {
   color:#FFF;
-  background:url('../images/genki.png') no-repeat 10px 50% #F93;
+  background:url('/resources/images/genki.png') no-repeat 10px 50% #F93;
   padding:15px 15px 15px 140px;
   position:relative;
   overflow:hidden;
@@ -449,36 +444,6 @@ a#fork-me:hover, a#fork-me:focus {
 #announcement .announce-controls.button-left { left:-20px; }
 #announcement .announce-controls.button-right { right:-20px; }
 
-/* random word module */
-#random-word-content {
-  margin-top:10px;
-}
-
-.random-word {
-  text-align:center;
-}
-
-.random-word ruby {
-  font-size:32px;
-}
-
-.random-word ruby rt {
-  font-size:18px;
-}
-
-.random-word .word-en {
-  font-size:24px;
-}
-
-.random-word .spoiler {
-  padding:6px;
-}
-
-.random-word .label {
-  text-align:right;
-  font-weight:bold;
-}
-
 /* content */
 #content { flex:1 0 auto; }
 
@@ -578,8 +543,40 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
 }
 #exercise-list .indent-block { margin-left:10px; }
 
+/* align sidebar nav buttons to full width */
+#exercise-list #link-list {
+  display:block;
+}
+#exercise-list #link-list > div {
+  display:block;
+  margin-bottom:6px;
+}
+#exercise-list #link-list > div > a {
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  margin:0;
+  text-align:left;
+}
+
+/* align sidebar related projects */
+#exercise-list #related {
+  display:block;
+}
+#exercise-list #related a {
+  display:block;
+  margin-bottom:8px;
+}
+#exercise-list #related img {
+  width:100%;
+  height:auto;
+  max-height:120px;
+  object-fit:contain;
+  margin:0;
+}
+
 #link-grammar { position:relative; }
-/*#link-grammar:after {
+#link-grammar:after {
   content:"NEW!";
   font-size:12px;
   color:#FF0;
@@ -590,7 +587,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon, h4:hover .a
           transform:rotate(-30deg);
   text-shadow:1px 1px 2px #330, -1px -1px 2px #330, 0px 0px 3px #330;
   pointer-events:none;
-}*/
+}
 
 /* donate box */
 .donate-box {
@@ -1323,10 +1320,10 @@ footer li:first-child:before { display:none; }
 
 /* page link icons */
 #exercise-list #page-links li:first-child a:before                { content:"\f015" }
-#exercise-list #page-links li a[href^="../../../help"]:before     { content:"\f059" }
-#exercise-list #page-links li a[href^="../../../report"]:before   { content:"\f188" }
-#exercise-list #page-links li a[href^="../../../download"]:before { content:"\f019" }
-#exercise-list #page-links li a[href^="../../../donate"]:before   { content:"\f004" }
+#exercise-list #page-links li a[href^="/help"]:before     { content:"\f059" }
+#exercise-list #page-links li a[href^="/report"]:before   { content:"\f188" }
+#exercise-list #page-links li a[href^="/download"]:before { content:"\f019" }
+#exercise-list #page-links li a[href^="/donate"]:before   { content:"\f004" }
 
 /* show page num. on hover */
 #exercise-list li a[data-page]:hover:after, #exercise-list li a[data-page]:focus:after {
@@ -2843,7 +2840,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   box-sizing:border-box;
 }
 
-.dict-search-results { 
+.dict-search-results {
   border:1px solid #CCC;
   margin:0;
 }
@@ -2903,7 +2900,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   height:30px;
 }
 
-.dictionary-group .group-selectors .select-all:before, .dictionary-group .group-selectors .deselect-all:before, 
+.dictionary-group .group-selectors .select-all:before, .dictionary-group .group-selectors .deselect-all:before,
 .dict-search-wrapper .group-selectors .select-all:before, .dict-search-wrapper .group-selectors .deselect-all:before {
   margin:0;
 }
@@ -3042,39 +3039,6 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
 
 
 /* GRAMMAR INDEX */
-.setsumei:before {
-  content:"Please see the following page(s) in your textbook for an explanation on this topic.";
-  display:block;
-  margin-bottom:5px;
-}
-
-.setsumei .first:after {
-  content:"1st";
-}
-
-.setsumei .second:after {
-  content:"2nd";
-}
-
-.setsumei .third:after {
-  content:"3rd";
-}
-
-.setsumei .first:after, .setsumei .second:after, .setsumei .third:after {
-  color:#FFF;
-  font-size:11px;
-  font-weight:bold;
-  background:#F93;
-  border:1px solid #E82;
-  border-radius:3px;
-  padding:0px 2px;
-  margin-left:4px;
-  vertical-align:top;
-  display:inline-block;
-  text-align:center;
-  width:25px;
-}
-
 .grammar-index .wip {
   color:#333;
   background:#F9BF3A;
@@ -3242,21 +3206,21 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   /* wrapper's max-width is 1000px, so remove padding so the page takes up the whole screen */
   .content-block { padding:30px 0; }
   #announce-inner { padding:0 6px; }
-  
+
   /* footer links */
   footer li {
     float:none;
     display:inline-block;
   }
-  
+
   footer li:before { margin-left:0; }
-  
+
   .footer-left, .footer-right {
     float:none;
     text-align:center;
     margin-bottom:10px;
   }
-  
+
   #light-switch-container {
     height:auto;
     margin-top:0;
@@ -3266,22 +3230,22 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
   p, h2, h3, h4, #quick-search-wrapper, .normal-block {
     padding:0 6px;
   }
-  
+
   /* adjust anchor position */
   a.anchor {
     margin:0 0 0 -5px;
   }
-  
+
   .sub-lesson-title a.anchor, .workbook-title a.anchor, .center a.anchor {
     margin:0 0 0 -25px;
   }
 
   /* remove margin in kana columns to reduce wrapping */
   .kana-quiz .quiz-column { margin:0; }
-  
+
   /* increase the size of text passages in multi-choice quizzes */
   .text-passage { width:90%; }
-  
+
   /* increase the size of multiple choice answers */
   .quiz-multi-answer { width:80%; }
 
@@ -3291,7 +3255,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
     float:none;
     margin:3px;
   }
-  
+
   /* modal */
   #genki-modal-header { font-size:16px; }
   #genki-modal-content { font-size:14px; }
@@ -3308,7 +3272,7 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
     width:auto !important;
     margin:3px auto;
   }
-  
+
   .drawing-quiz .quiz-answer-row {
     flex-wrap:wrap;
     padding-bottom:25px;
@@ -3335,22 +3299,22 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
     left:50%;
     margin-left:-60px;
   }
-  
+
   .edition-icon:after { margin-top:30px; }
-  
+
   /* display columns below one another */
   .columns-2 > div, .dictionary-group {
     float:none;
     width:100%;
   }
-  
+
   .inline-columns > div, .lesson-summary .inline-columns > div {
     margin-right:5px;
   }
-  
+
   .dictionary-group { margin:0; }
   .dictionary-group .definition { padding:0 3px; }
-  
+
   /* change vocab key border to a horizontal one */
   .vocab-key > div:first-child, .vocab-key > div:last-child { border:none; }
   .vocab-key > div:first-child { border-bottom:1px solid #999; }
@@ -3360,20 +3324,20 @@ input:checked + .genki_pseudo_checkbox:after { font-size:14px; }
     float:left;
     width:33.33%;
   }
-  
+
   .drag-quiz .vocab-horizontal #question-list, .drag-quiz .vocab-horizontal #drop-list, .drag-quiz .vocab-horizontal #answer-list {
     float:none;
     width:auto;
   }
-  
+
   .vocab-horizontal .quiz-item-group { width:auto; }
-  
+
   /* reduce size of lesson titles on index */
   #lessons .lesson-title { font-size:18px; }
-  
+
   /* reduce quick dictionary width */
   #quick-jisho-window { width:300px; }
-  
+
   /* add margin below problems that can overlap each other */
   .fill-quiz.quiz-over .writing-zone + .writing-zone {
     margin-bottom:20px;

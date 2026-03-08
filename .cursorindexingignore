@@ -1,0 +1,3 @@
+# https://docs.cursor.com/en/context/ignore-files
+/_private/
+/.pnpm-store/

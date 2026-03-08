@@ -1,0 +1,6 @@
+# https://help.github.com/articles/ignoring-files
+/_private/
+AGENTS.md
+node_modules/
+.pnpm-store/
+.env.local

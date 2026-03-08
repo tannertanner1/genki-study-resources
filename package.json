@@ -1,0 +1,21 @@
+{
+  "name": "genki-study-resources",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "npx serve .",
+    "minified": "node scripts/minify.js status",
+    "minify": "node scripts/minify.js",
+    "inject": "node scripts/inject.js",
+    "test": "node scripts/inject.js --test",
+    "build": "node scripts/inject.js",
+    "reinstall": "rm -rf node_modules pnpm-lock.yaml && pnpm install"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.5.3",
+    "terser": "^5.36.0"
+  }
+}
