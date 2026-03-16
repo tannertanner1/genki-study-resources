@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: どこ - Lesson 2 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: どこ - Lesson 2 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: どこ - Lesson 2 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: どこ - Lesson 2 | Genki Study Resources - 2nd Edition">
-    <meta name="description" content="You're lost and need directions. Read the provided information and ask where the following are.">
-    <meta property="og:description" content="You're lost and need directions. Read the provided information and ask where the following are.">
+    <title>Practice: これ／それ - Lesson 2 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: これ／それ - Lesson 2 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: これ／それ - Lesson 2 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: これ／それ - Lesson 2 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Items 1-7 are near you, and items 8-14 are near your friend. Your friend asks what these things are called in Japanese. Pay attention to これ and それ as you answer the questions.">
+    <meta property="og:description" content="Items 1-7 are near you, and items 8-14 are near your friend. Your friend asks what these things are called in Japanese. Pay attention to これ and それ as you answer the questions.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I, page 74, problem IV, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki I, page 69, problem II-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-2/grammar-3/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-2/grammar-3/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,89 +55,250 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'You\'re lost and need directions. Read the provided information and ask where the following are using {!GRI|どこ|l2-p3}.',
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Items 1-7 are near you, and items 8-14 are near your friend. Your friend asks what these things are called in Japanese. Pay attention to {!GRI|これ and それ|l2-p1} as you answer the questions.',
 
       quizlet : [
-        {
-          question : 'You need to find the <strong>bank</strong>. Ask the kind old woman for directions.',
-          answers : [
-            'Aすみません。ぎんこうはどこですか。',
-            'ぎんこうはどこですか。',
-            'すみません。ぎんこうですか。'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'それはなんですか。<br><em>*points to a pen*</em>',
+            answers : [
+              'Aこれはペンです。',
+              'それはペンです。',
+              'これはかさです。',
+              'それはかさです。',
+            ]
+          },
 
-        {
-          question : 'You need to go to the <strong>bathroom</strong>, badly. Ask the nice lady for directions.',
-          answers : [
-            'Aすみません。トイレはどこですか。',
-            'トイレはどこですか。',
-            'すみません。トイレですか。'
-          ]
-        },
+          {
+            question : 'それはなんですか。<br><em>*points to a bike*</em>',
+            answers : [
+              'Aこれはじてんしゃです。',
+              'それはじてんしゃです。',
+              'これはしんぶんです。',
+              'それはしんぶんです。'
+            ]
+          },
 
-        {
-          question : 'You can\'t find the <strong>library</strong> to return your book. Ask the old man for directions.',
-          answers : [
-            'Aすみません。としょかんはどこですか。',
-            'としょかんはどこですか。',
-            'すみません。としょかんですか。'
-          ]
-        },
+          {
+            question : 'それはなんですか。<br><em>*points to a hat*</em>',
+            answers : [
+              'Aこれはぼうしです。',
+              'それはぼうしです。',
+              'これはかばんです。',
+              'それはかばんです。'
+            ]
+          },
 
-        {
-          question : 'You need to get going, but you can\'t find your <strong>shoes</strong>. Ask the young man if he’s seen them.',
-          answers : [
-            'Aすみません。くつはどこですか。',
-            'くつはどこですか。',
-            'すみません。くつですか。'
-          ]
-        },
+          {
+            question : 'それはなんですか。<br><em>*points to a pair of jeans*</em>',
+            answers : [
+              'Aこれはジーンズです。',
+              'それはジーンズです。',
+              'これはTシャツです。',
+              'それはTシャツです。'
+            ]
+          },
 
-        {
-          question : 'You can\'t find <strong>Professor Yamashita</strong>. Ask your fellow classmate for directions.',
-          answers : [
-            'Aすみません。やましたせんせいはどこですか。',
-            'やましたせんせいはどこですか。',
-            'すみません。やましたせんせいですか。'
-          ]
-        },
+          {
+            question : 'それはなんですか。<br><em>*points to an umbrella*</em>',
+            answers : [
+              'Aこれはかさです。',
+              'それはかさです。',
+              'これはくつです。',
+              'それはくつです。'
+            ]
+          },
 
-        {
-          question : 'You\'re at a restaurant and can\'t find the <strong>menu</strong>. Ask Grandma where it\'s at.',
-          answers : [
-            'Aすみません。メニューはどこですか。',
-            'メニューはどこですか。',
-            'すみません。メニューですか。'
-          ]
-        },
+          {
+            question : 'それはなんですか。<br><em>*points to a smartphone*</em>',
+            answers : [
+              'Aこれはスマホです。',
+              'それはスマホです。',
+              'これはノートです。',
+              'それはノートです。'
+            ]
+          },
 
-        {
-          question : 'You\'re searching for a <strong>dictionary</strong> in the library, but can\'t find it. Ask the young lady where it\'s at',
-          answers : [
-            'Aすみません。じしょはどこですか。',
-            'じしょはどこですか。',
-            'すみません。じしょですか。'
-          ]
-        }
+          {
+            question : 'それはなんですか。<br><em>*points to a bag*</em>',
+            answers : [
+              'Aこれはかばんです。',
+              'それはかばんです。',
+              'これはとけいです。',
+              'それはとけいです。'
+            ]
+          },
+
+          {
+            question : 'これはなんですか。<br><em>*points to a t-shirt*</em>',
+            answers : [
+              'AそれはTシャツです。',
+              'これはTシャツです。',
+              'これはジーンズです。',
+              'それはジーンズです。'
+            ]
+          },
+
+          {
+            question : 'これはなんですか。<br><em>*points to a wallet*</em>',
+            answers : [
+              'Aそれはさいふです。',
+              'これはさいふです。',
+              'これはぼうしです。',
+              'それはぼうしです。'
+            ]
+          },
+
+          {
+            question : 'これはなんですか。<br><em>*points to a Japanese book*</em>',
+            answers : [
+              'Aそれはにほんごのほんです。',
+              'それはほんです。',
+              'これはにほんごのほんです。',
+              'これはほんです。'
+            ]
+          },
+
+          {
+            question : 'これはなんですか。<br><em>*points to a notebook*</em>',
+            answers : [
+              'Aそれはノートです。',
+              'これはノートです。',
+              'これはスマホです。',
+              'それはスマホです。'
+            ]
+          },
+
+          {
+            question : 'これはなんですか。<br><em>*points to a pair of shoes*</em>',
+            answers : [
+              'Aそれはくつです。',
+              'これはくつです。',
+              'これはペンです。',
+              'それはペンです。'
+            ]
+          },
+
+          {
+            question : 'これはなんですか。<br><em>*points to a watch*</em>',
+            answers : [
+              'Aそれはとけいです。',
+              'これはとけいです。',
+              'これはさいふです。',
+              'それはさいふです。'
+            ]
+          },
+
+          {
+            question : 'これはなんですか。<br><em>*points to a newspaper*</em>',
+            answers : [
+              'Aそれはしんぶんです。',
+              'これはしんぶんです。',
+              'これはじてんしゃです。',
+              'それはじてんしゃです。'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="count-problems">'+
+          '<div class="columns-2 clear">'+
+            '<div>'+
+              '<h4>Near you</h4>'+
+              '<div class="example-problem">'+
+                '<div class="inner-problem">'+
+                  'それはなんですか。<em>*points to a pen*</em><br>'+
+                  'これは{ペン}です。'+
+                '</div>'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'それはなんですか。<em>*points to a bike*</em><br>'+
+                '{これはじてんしゃです|これは自転車です|answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'それはなんですか。<em>*points to a hat*</em><br>'+
+                '{これはぼうしです|これは帽子です|answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'それはなんですか。<em>*points to a pair of jeans*</em><br>'+
+                '{これはジーンズです}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'それはなんですか。<em>*points to an umbrella*</em><br>'+
+                '{これはかさです|これは傘です|answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'それはなんですか。<em>*points to a smartphone*</em><br>'+
+                '{これはスマホです}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'それはなんですか。<em>*points to a bag*</em><br>'+
+                '{これはかばんです|これは鞄です|answer}。'+
+              '</div>'+
+            '</div>'+
+
+            '<div>'+
+              '<h4>Near your friend</h4>'+
+              '<div class="example-problem">'+
+                '<div class="inner-problem">'+
+                  'これはなんですか。<em>*points to a t-shirt*</em><br>'+
+                  'それは{%(T/Ｔ)シャツ}です。'+
+                '</div>'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはなんですか。<em>*points to a wallet*</em><br>'+
+                '{それはさいふです|それは財布です|answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはなんですか。<em>*points to a Japanese book*</em><br>'+
+                '{それはにほんごのほんです|それは日本語の本です|' + Genki.getAlts('それは{日本語}の{本}です', 'にほんご|ほん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはなんですか。<em>*points to a notebook*</em><br>'+
+                '{それはノートです}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはなんですか。<em>*points to a pair of shoes*</em><br>'+
+                '{それはくつです|それは靴です|answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはなんですか。<em>*points to a watch*</em><br>'+
+                '{それはとけいです|それは時計です|answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはなんですか。<em>*points to a newspaper*</em><br>'+
+                '{それはしんぶんです|それは新聞です|answer}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>

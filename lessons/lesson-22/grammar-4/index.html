@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: Causative + てください - Lesson 22 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: Causative + てください - Lesson 22 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: Causative + てください - Lesson 22 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: Causative + てください - Lesson 22 | Genki Study Resources - 2nd Edition">
+    <title>Practice: Causative + てください - Lesson 22 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: Causative + てください - Lesson 22 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: Causative + てください - Lesson 22 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: Causative + てください - Lesson 22 | Genki Study Resources - 3rd Edition">
     <meta name="description" content="You have been working for a company, but your boss underestimates you. Volunteer to do the following activities using the causative + てください.">
     <meta property="og:description" content="You have been working for a company, but your boss underestimates you. Volunteer to do the following activities using the causative + てください.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II, page 244, problem II-D, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki II, page 242, problem II-D, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-22/grammar-4/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-22/grammar-4/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,89 +55,139 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      format : 'practice',
+      type : ['multi', 'fill'],
       info : 'You have been working for a company, but your boss underestimates you. Volunteer to do the following activities using the {!GRI|causative + てください|l22-p2}.',
 
       quizlet : [
-        {
-          question : 'コピーを取る',
-          answers : [
-            'A私にコピーを取らせてください。',
-            '私にコピーを取られてください。',
-            '私にコピーを取させてください。'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'コピーを<ruby>取<rt>と</rt></ruby>る',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>にコピーを<ruby>取<rt>と</rt></ruby>らせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にコピーを<ruby>取<rt>と</rt></ruby>られてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にコピーを<ruby>取<rt>と</rt></ruby>させてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にコピーを<ruby>取<rt>と</rt></ruby>されてください。'
+            ]
+          },
 
-        {
-          question : '出張に行く',
-          answers : [
-            'A私に出張に行かせてください。',
-            '私に出張に行かれてください。',
-            '私に出張に行いせてください。'
-          ]
-        },
+          {
+            question : '<ruby>出張<rt>しゅっちょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>く',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>に<ruby>出張<rt>しゅっちょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>かせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>に<ruby>出張<rt>しゅっちょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>かれてください。',
+              '<ruby>私<rt>わたし</rt></ruby>に<ruby>出張<rt>しゅっちょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>いせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>に<ruby>出張<rt>しゅっちょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>させてください。'
+            ]
+          },
 
-        {
-          question : 'お客さんを案内する',
-          answers : [
-            'A私にお客さんを案内させてください。',
-            '私にお客さんを案内されてください。',
-            '私にお客さんを案内しさせてください。'
-          ]
-        },
+          {
+            question : 'お<ruby>客<rt>きゃく</rt></ruby>さんを<ruby>案内<rt>あんない</rt></ruby>する',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>にお<ruby>客<rt>きゃく</rt></ruby>さんを<ruby>案内<rt>あんない</rt></ruby>させてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にお<ruby>客<rt>きゃく</rt></ruby>さんを<ruby>案内<rt>あんない</rt></ruby>されてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にお<ruby>客<rt>きゃく</rt></ruby>さんを<ruby>案内<rt>あんない</rt></ruby>しさせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にお<ruby>客<rt>きゃく</rt></ruby>さんを<ruby>案内<rt>あんない</rt></ruby>しらせてください。'
+            ]
+          },
 
-        {
-          question : '書類を翻訳する',
-          answers : [
-            'A私に書類を翻訳させてください。',
-            '私に書類を翻訳されてください。',
-            '私に書類を翻訳しらせてください。'
-          ]
-        },
+          {
+            question : '<ruby>書類<rt>しょるい</rt></ruby>を<ruby>翻訳<rt>ほんやく</rt></ruby>する',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>に<ruby>書類<rt>しょるい</rt></ruby>を<ruby>翻訳<rt>ほんやく</rt></ruby>させてください。',
+              '<ruby>私<rt>わたし</rt></ruby>に<ruby>書類<rt>しょるい</rt></ruby>を<ruby>翻訳<rt>ほんやく</rt></ruby>されてください。',
+              '<ruby>私<rt>わたし</rt></ruby>に<ruby>書類<rt>しょるい</rt></ruby>を<ruby>翻訳<rt>ほんやく</rt></ruby>しらせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>に<ruby>書類<rt>しょるい</rt></ruby>を<ruby>翻訳<rt>ほんやく</rt></ruby>しさせてください。'
+            ]
+          },
 
-        {
-          question : 'その仕事をやる',
-          answers : [
-            'A私にその仕事をやらせてください。',
-            '私にその仕事をやられてください。',
-            '私にその仕事をやさせてください。'
-          ]
-        },
+          {
+            question : 'その<ruby>仕事<rt>しごと</rt></ruby>をやる',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>にその<ruby>仕事<rt>しごと</rt></ruby>をやらせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にその<ruby>仕事<rt>しごと</rt></ruby>をやられてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にその<ruby>仕事<rt>しごと</rt></ruby>をやさせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にその<ruby>仕事<rt>しごと</rt></ruby>をやされてください。'
+            ]
+          },
 
-        {
-          question : '次のプロジェクトの計画を立てる',
-          answers : [
-            'A私に次のプロジェクトの計画を立てさせてください。',
-            '私に次のプロジェクトの計画を立てされてください。',
-            '私に次のプロジェクトの計画を立てらせてください。'
-          ]
-        },
+          {
+            question : '<ruby>次<rt>つぎ</rt></ruby>のプロジェクトの<ruby>計画<rt>けいかく</rt></ruby>を<ruby>立<rt>た</rt></ruby>てる',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>に<ruby>次<rt>つぎ</rt></ruby>のプロジェクトの<ruby>計画<rt>けいかく</rt></ruby>を<ruby>立<rt>た</rt></ruby>てさせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>に<ruby>次<rt>つぎ</rt></ruby>のプロジェクトの<ruby>計画<rt>けいかく</rt></ruby>を<ruby>立<rt>た</rt></ruby>てされてください。',
+              '<ruby>私<rt>わたし</rt></ruby>に<ruby>次<rt>つぎ</rt></ruby>のプロジェクトの<ruby>計画<rt>けいかく</rt></ruby>を<ruby>立<rt>た</rt></ruby>てらせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>に<ruby>次<rt>つぎ</rt></ruby>のプロジェクトの<ruby>計画<rt>けいかく</rt></ruby>を<ruby>立<rt>た</rt></ruby>てられてください。'
+            ]
+          },
 
-        {
-          question : 'お嬢さんと結婚する',
-          answers : [
-            'A私にお嬢さんと結婚させてください。',
-            '私にお嬢さんと結婚されてください。',
-            '私にお嬢さんと結婚しさせてください。'
-          ]
-        }
+          {
+            question : 'お<ruby>嬢<rt>じょう</rt></ruby>さんと<ruby>結婚<rt>けっこん</rt></ruby>する',
+            answers : [
+              'A<ruby>私<rt>わたし</rt></ruby>にお<ruby>嬢<rt>じょう</rt></ruby>さんと<ruby>結婚<rt>けっこん</rt></ruby>させてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にお<ruby>嬢<rt>じょう</rt></ruby>さんと<ruby>結婚<rt>けっこん</rt></ruby>されてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にお<ruby>嬢<rt>じょう</rt></ruby>さんと<ruby>結婚<rt>けっこん</rt></ruby>しさせてください。',
+              '<ruby>私<rt>わたし</rt></ruby>にお<ruby>嬢<rt>じょう</rt></ruby>さんと<ruby>結婚<rt>けっこん</rt></ruby>しらせてください。'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'コピーを<ruby>取<rt>と</rt></ruby>る<br>'+
+            '<i class="fa">&#xf061;</i>　<ruby>私<rt>わたし</rt></ruby>にコピーを<ruby>取<rt>と</rt></ruby>らせてください。'+
+          '</div>'+
+        '</div>'+
+
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>出張<rt>しゅっちょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<br>'+
+              '{私に出張に行かせてください|わたしにしゅっちょうにいかせてください|' + Genki.getAlts('{私}に{出張}に{行}かせてください', 'わたし|しゅっちょう|い') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'お<ruby>客<rt>きゃく</rt></ruby>さんを<ruby>案内<rt>あんない</rt></ruby>する<br>'+
+              '{私にお客さんを案内させてください|わたしにおきゃくさんをあんないさせてください|' + Genki.getAlts('{私}にお{客}さんを{案内}させてください', 'わたし|きゃく|あんない') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>書類<rt>しょるい</rt></ruby>を<ruby>翻訳<rt>ほんやく</rt></ruby>する<br>'+
+              '{私に書類を翻訳させてください|わたしにしょるいをほんやくさせてください|' + Genki.getAlts('{私}に{書類}を{翻訳}させてください', 'わたし|しょるい|ほんやく') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'その<ruby>仕事<rt>しごと</rt></ruby>をやる<br>'+
+              '{私にその仕事をやらせてください|わたしにそのしごとをやらせてください|' + Genki.getAlts('{私}にその{仕事}をやらせてください', 'わたし|しごと') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>次<rt>つぎ</rt></ruby>のプロジェクトの<ruby>計画<rt>けいかく</rt></ruby>を<ruby>立<rt>た</rt></ruby>てる<br>'+
+              '{私に次のプロジェクトの計画を立てさせてください|わたしにつぎのプロジェクトのけいかくをたてさせてください|' + Genki.getAlts('{私}に{次}のプロジェクトの{計画}を{立}てさせてください', 'わたし|つぎ|けいかく|た') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'お<ruby>嬢<rt>じょう</rt></ruby>さんと<ruby>結婚<rt>けっこん</rt></ruby>する<br>'+
+              '{私にお嬢さんと結婚させてください|わたしにおじょうさんとけっこんさせてください|' + Genki.getAlts('{私}にお{嬢}さんと{結婚}させてください', 'わたし|じょう|けっこん') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>

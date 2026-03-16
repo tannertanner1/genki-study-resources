@@ -1,6 +1,6 @@
 ﻿```bash
-git clone https://github.com/tannertanner1/genki-study-resources.git
-cd genki-study-resources
+git clone https://github.com/tannertanner1/studyresources.git
+cd studyresources
 npx serve .
 ```
 

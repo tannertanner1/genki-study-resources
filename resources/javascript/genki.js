@@ -37,9 +37,6 @@
     // tells us if a quiz item is marked in a drag and drop quiz
     markedItem: null,
 
-    // tells us what edition of Genki the student is using so we can change the URLs accordingly
-    ed: "lessons" + (/lessons-3rd/.test(window.location.pathname) ? "-3rd" : ""),
-
     // tells us if Genki is being used on a local file system so we can append index.html to URLs
     local: window.location.protocol == "file:" ? "index.html" : "",
 
@@ -211,7 +208,7 @@
       // handles switching and conversion of exercises
       if (typeof o.type === "object") {
         // the `begin` query in the URL determines the exercise to immediately start (without popup confirmation)
-        // example: https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/lesson-4/vocab-1/?begin=1 (this starts multiple choice, 0 would start drag and drop)
+        // example: https://studyresources.jp/studyresources/lessons/lesson-4/vocab-1/?begin=1 (this starts multiple choice, 0 would start drag and drop)
         // `begin` or `start` may be used equally, whichever is preferred.
         var begin = /(?:begin|start)=\d/.test(window.location.search) ? window.location.search.replace(/.*?(?:begin|start)=(\d).*/, "$1") : false,
           i = 0,
@@ -524,7 +521,7 @@
             sub,
             width,
             placeholder
-          return '<a href="' + getPaths() + "lessons-3rd/appendix/grammar-index/" + Genki.local + "#" + data[2] + '" target="_blank"' + (Genki.local && !Genki.debug ? "" : " onclick=\"Genki.getGrammarPoint(this, '" + data[2] + "'); return false;\"") + ">" + data[1] + "</a>"
+          return '<a href="' + getPaths() + "lessons/appendix/grammar-index/" + Genki.local + "#" + data[2] + '" target="_blank"' + (Genki.local && !Genki.debug ? "" : " onclick=\"Genki.getGrammarPoint(this, '" + data[2] + "'); return false;\"") + ">" + data[1] + "</a>"
         })
       }
 
@@ -803,10 +800,10 @@
               return Genki.parse.image(data)
             } else if (data[0] == "!GRI") {
               // Grammar Index links
-              return '<a href="' + getPaths() + "lessons-3rd/appendix/grammar-index/" + Genki.local + "#" + data[2] + '" target="_blank"' + (Genki.local && !Genki.debug ? "" : " onclick=\"Genki.getGrammarPoint(this, '" + data[2] + "'); return false;\"") + ">" + data[1] + "</a>"
+              return '<a href="' + getPaths() + "lessons/appendix/grammar-index/" + Genki.local + "#" + data[2] + '" target="_blank"' + (Genki.local && !Genki.debug ? "" : " onclick=\"Genki.getGrammarPoint(this, '" + data[2] + "'); return false;\"") + ">" + data[1] + "</a>"
             } else if (data[0] == "!AUDIO") {
-              // audio tracks
-              return '<div class="audio-block center">' + '<audio id="' + data[1] + '" controls><source src="' + getPaths() + "resources/audio/" + (Genki.ed == "lessons-3rd" ? "3rd-edition/" : "2nd-edition/") + data[1] + '.mp3" type="audio/mpeg"></audio>' + "</div>"
+              // audio tracks (3rd Edition only)
+              return '<div class="audio-block center">' + '<audio id="' + data[1] + '" controls><source src="' + getPaths() + "resources/audio/" + data[1] + '.mp3" type="audio/mpeg"></audio>' + "</div>"
             } else if (data[0] == "!PLAY") {
               // buttons for playing specific points of audio
               return '<button class="button play-button" onclick="Genki.playAudio(\'' + data[1] + "', " + data[2] + ');"><i class="fa">&#xf04b;</i></button>'
@@ -1170,7 +1167,6 @@
         // event listeners for marking and dropping answers with either a click or the 'Enter' key being pressed
         if (!Genki.globalEventListenersSet) {
           Genki.globalEventListenersSet = true // prevents duplication of event listeners on Genki.reset();
-
           ;["click", "keypress"].forEach(function (eventName) {
             document.addEventListener(eventName, function (e) {
               // if the event was a keypress and the key was not enter, bail out (same if the quiz is over)
@@ -1512,7 +1508,7 @@
       // save results in local storage
       if (storageOK && Genki.active.exercise.length > 0 && !/appendix|study-tools/.test(Genki.active.exercise[0])) {
         var lesson = Genki.active.exercise[0],
-          genkiEdition = localStorage.GenkiEdition,
+          genkiEdition = localStorage.GenkiEdition || "3rd",
           lessonsResults = JSON.parse(localStorage.Results)
 
         if (!lessonsResults[genkiEdition]) lessonsResults[genkiEdition] = {}
@@ -2329,7 +2325,7 @@
             a = a.split("|")
 
             // create the next/prev link
-            more += '<a href="/' + Genki.ed + "/" + a[0] + "/" + Genki.local + Genki.debug + '" class="button ' + (i == 1 ? "prev" : "next") + '-ex" title="' + (i == 1 ? "Previous" : "Next") + ' exercise">' + a[1] + "</a>"
+            more += '<a href="/lessons/' + a[0] + "/" + Genki.local + Genki.debug + '" class="button ' + (i == 1 ? "prev" : "next") + '-ex" title="' + (i == 1 ? "Previous" : "Next") + ' exercise">' + a[1] + "</a>"
           }
         }
 
@@ -2350,7 +2346,7 @@
       exerciseList: function () {
         var main =
           '<div id="link-list" class="normal-block indent-block">' +
-          '<div><a id="link-github" href="https://github.com/SethClydesdale/genki-study-resources"><i class="fa">&#xf09b;</i>GitHub</a></div>' +
+          '<div><a id="link-github" href="https://github.com/tannertanner1/studyresources"><i class="fa">&#xf09b;</i>GitHub</a></div>' +
           '<div><a id="link-anki" href="' +
           getPaths() +
           "help/anki-decks/" +
@@ -2358,7 +2354,7 @@
           '"><i class="fa">&#xf005;</i><span class="en">Anki</span><span class="ja">Ankiのデッキ</span></a></div>' +
           '<div><a id="link-grammar" href="' +
           getPaths() +
-          "lessons-3rd/appendix/grammar-index/" +
+          "lessons/appendix/grammar-index/" +
           Genki.local +
           '"><i class="fa">&#xf02d;</i><span class="en">Grammar</span><span class="ja">文法索引</span></a></div>' +
           '<div><a id="link-help" href="' +
@@ -2370,10 +2366,10 @@
           "</div>" +
           '<div id="related" class="indent-block">' +
           '<h3><span class="en">Related Projects</span><span class="ja">関連のプロジェクト</span></h3>' +
-          '<a href="https://sethclydesdale.github.io/quartet-study-resources/" title="Quartet Study Resources"><img src="' +
+          '<a href="https://studyresources.jp/quartet-study-resources/" title="Quartet Study Resources"><img src="' +
           getPaths() +
           'resources/images/quartet-img.png" alt="Quartet Study Resources"></a>' +
-          '<a href="https://sethclydesdale.github.io/tobira-study-resources/" title="Tobira Study Resources"><img src="' +
+          '<a href="https://studyresources.jp/tobira-study-resources/" title="Tobira Study Resources"><img src="' +
           getPaths() +
           'resources/images/tobira-img.png" alt="Tobira Study Resources"></a>' +
           "</div>"
@@ -2397,12 +2393,12 @@
             }
 
           if (storageOK) {
-            localStorage.GenkiEdition = /lessons-3rd/.test(window.location.pathname) ? "3rd" : "2nd"
+            localStorage.GenkiEdition = "3rd"
 
-            // Create storage for lessons results for specific edition
-            if (!localStorage.Results || !new RegExp(localStorage.GenkiEdition).test(localStorage.Results)) {
+            // Create storage for lessons results for the 3rd edition
+            if (!localStorage.Results || !/\"3rd\"/.test(localStorage.Results)) {
               var results = localStorage.Results ? JSON.parse(localStorage.Results) : {}
-              results[localStorage.GenkiEdition] = {}
+              results["3rd"] = {}
               localStorage.Results = JSON.stringify(results)
             }
           }
@@ -2440,7 +2436,7 @@
               resultSpan = lessonResult == 100 ? resultSpans.perfect : lessonResult >= 70 ? resultSpans.good : lessonResult >= 50 ? resultSpans.average : resultSpans.low,
               prevScore = lessonResult > -1 ? resultSpan + lessonResult + "%" + "</span>" : ""
 
-            list += '<li class="menu-item-list"><a href="' + (lesson == "\\.\\.\\/" ? linkData[0] : "/" + Genki.ed + "/" + linkData[0] + "/") + Genki.local + Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, "$1") < 13 ? "I" : "II") + (/workbook-|wb-/.test(linkData[0]) ? " Workbook" : "") + ": " + linkData[2] + '"' : "") + ' title="' + linkData[1] + '">' + linkData[1] + "</a>" + " " + prevScore + "</li>"
+            list += '<li class="menu-item-list"><a href="' + (lesson == "\\.\\.\\/" ? linkData[0] : "/lessons/" + linkData[0] + "/") + Genki.local + Genki.debug + '" ' + (linkData[2] ? 'data-page="Genki ' + (+linkData[0].replace(/lesson-(\d+).*/, "$1") < 13 ? "I" : "II") + (/workbook-|wb-/.test(linkData[0]) ? " Workbook" : "") + ": " + linkData[2] + '"' : "") + ' title="' + linkData[1] + '">' + linkData[1] + "</a>" + " " + prevScore + "</li>"
           }
 
           // add the exercise list to the document
@@ -2910,7 +2906,7 @@
           if (zone) {
             // trim out grammar point number and format anchor links for use with the quick grammar review modal
             zone.innerHTML = grammar[0].replace(/\d+\. /, "").replace(/href="#(.*?)"/g, 'onclick="Genki.getGrammarPoint(this, \'$1\'); return false;" target="_blank" href="' + url + '#$1"')
-            zone.className = "grammar-index " + (Genki.ed == "lessons" ? "second-ed" : "third-ed")
+            zone.className = "grammar-index third-ed"
           }
         } else if (zone) {
           zone.innerHTML = '<br><b><span class="en">Failed to retrieve grammar point. Click "View in Grammar Index" to try viewing the grammar point directly.</span><span class="ja">文法ノートが見つかりませんでした。「文法索引で見る」をクリックして文法索引で見てみます。</span></b>'
@@ -2968,7 +2964,7 @@
 
       // only take the user to random lessons
       if (/lesson-\d+/.test(exercise[0])) {
-        window.location.href = "/" + Genki.ed + "/" + exercise[0] + "/" + Genki.local + Genki.debug
+        window.location.href = "/lessons/" + exercise[0] + "/" + Genki.local + Genki.debug
       } else {
         // try again if not a lesson
         Genki.randomExercise()

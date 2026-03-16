@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Hiragana Practice: Word Match - Lesson 1 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Hiragana Practice: Word Match - Lesson 1 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Hiragana Practice: Word Match - Lesson 1 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Hiragana Practice: Word Match - Lesson 1 | Genki Study Resources - 2nd Edition">
+    <title>Hiragana Practice: Word Match - Lesson 1 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Hiragana Practice: Word Match - Lesson 1 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Hiragana Practice: Word Match - Lesson 1 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Hiragana Practice: Word Match - Lesson 1 | Genki Study Resources - 3rd Edition">
     <meta name="description" content="Match the person and place names to their hiragana counterparts.">
     <meta property="og:description" content="Match the person and place names to their hiragana counterparts.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I, Reading and Writing, page 290, problem I-B, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki I, Reading and Writing, page 297, problem I-B, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-1/literacy-2/">
+    <meta property="og:site_name" content="studyresources.jp">
+    <meta property="og:url" content="https://studyresources.jp/studyresources/lessons/lesson-1/literacy-2/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/studyresources/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,38 +55,174 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'drag',
-      info : 'Match the person and place names to their hiragana counterparts.',
+      format : 'practice',
+      type : ['multi', 'fill', 'drag'],
+      info : ['Read the Japanese and choose the answer that matches it.', 'Match the person and place names by writing the letter for each match.', 'Match the person and place names to their hiragana counterparts.'],
 
-      quizlet : {
-        'さくま' : 'Sakuma',
-        'たなか' : 'Tanaka',
-        'もりかわ' : 'Morikawa',
-        'たかはし' : 'Takahashi',
-        'やまもと' : 'Yamamoto',
-        'もりおか' : 'Morioka',
-        'よこはま' : 'Yokohama',
-        'みと' : 'Mito',
-        'おかやま' : 'Okayama',
-        'くまもと' : 'Kumamoto'
-      }
+      quizlet : [
+        // MULTIPLE CHOICE
+        [
+          {
+            question : '<u>Person\'s name</u><br>たなか',
+            answers : [
+              'Sakuma',
+              'ATanaka',
+              'Morikawa',
+              'Takahashi',
+              'Yamamoto'
+            ]
+          },
+
+          {
+            question : '<u>Person\'s name</u><br>やまもと',
+            answers : [
+              'Sakuma',
+              'Tanaka',
+              'Morikawa',
+              'Takahashi',
+              'AYamamoto'
+            ]
+          },
+
+          {
+            question : '<u>Person\'s name</u><br>さくま',
+            answers : [
+              'ASakuma',
+              'Tanaka',
+              'Morikawa',
+              'Takahashi',
+              'Yamamoto'
+            ]
+          },
+
+          {
+            question : '<u>Person\'s name</u><br>たかはし',
+            answers : [
+              'Sakuma',
+              'Tanaka',
+              'Morikawa',
+              'ATakahashi',
+              'Yamamoto'
+            ]
+          },
+
+          {
+            question : '<u>Person\'s name</u><br>もりかわ',
+            answers : [
+              'Sakuma',
+              'Tanaka',
+              'AMorikawa',
+              'Takahashi',
+              'Yamamoto'
+            ]
+          },
+
+          {
+            question : '<u>Place name</u><br>くまもと',
+            answers : [
+              'Morioka',
+              'Yokohama',
+              'Mito',
+              'Okayama',
+              'AKumamoto'
+            ]
+          },
+
+          {
+            question : '<u>Place name</u><br>おかやま',
+            answers : [
+              'Morioka',
+              'Yokohama',
+              'Mito',
+              'AOkayama',
+              'Kumamoto'
+            ]
+          },
+
+          {
+            question : '<u>Place name</u><br>もりおか',
+            answers : [
+              'AMorioka',
+              'Yokohama',
+              'Mito',
+              'Okayama',
+              'Kumamoto'
+            ]
+          },
+
+          {
+            question : '<u>Place name</u><br>よこはま',
+            answers : [
+              'Morioka',
+              'AYokohama',
+              'Mito',
+              'Okayama',
+              'Kumamoto'
+            ]
+          },
+
+          {
+            question : '<u>Place name</u><br>みと',
+            answers : [
+              'Morioka',
+              'Yokohama',
+              'AMito',
+              'Okayama',
+              'Kumamoto'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="count-problems">'+
+          '<div class="columns-2 clear">'+
+            '<div>'+
+              '<h4><u>Person\'s name</u></h4>'+
+              '<div class="problem"><span class="med-label">たなか　　({b})</span>(a) Sakuma</div>'+
+              '<div class="problem"><span class="med-label">やまもと　({e})</span>(b) Tanaka</div>'+
+              '<div class="problem"><span class="med-label">さくま　　({a})</span>(c) Morikawa</div>'+
+              '<div class="problem"><span class="med-label">たかはし　({d})</span>(d) Takahashi</div>'+
+              '<div class="problem"><span class="med-label">もりかわ　({c})</span>(e) Yamamoto</div>'+
+            '</div>'+
+
+            '<div>'+
+              '<h4><u>Place name</u></h4>'+
+              '<div class="problem"><span class="med-label">くまもと　({j})</span>(f) Morioka</div>'+
+              '<div class="problem"><span class="med-label">おかやま　({i})</span>(g) Yokohama</div>'+
+              '<div class="problem"><span class="med-label">もりおか　({f})</span>(h) Mito</div>'+
+              '<div class="problem"><span class="med-label">よこはま　({g})</span>(i) Okayama</div>'+
+              '<div class="problem"><span class="med-label">みと　　({h})</span>(j) Kumamoto</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>',
+
+
+        // DRAG AND DROP
+        {
+          'さくま' : 'Sakuma',
+          'たなか' : 'Tanaka',
+          'もりかわ' : 'Morikawa',
+          'たかはし' : 'Takahashi',
+          'やまもと' : 'Yamamoto',
+          'もりおか' : 'Morioka',
+          'よこはま' : 'Yokohama',
+          'みと' : 'Mito',
+          'おかやま' : 'Okayama',
+          'くまもと' : 'Kumamoto'
+        }
+      ]
     });</script>
   </body>
 </html>

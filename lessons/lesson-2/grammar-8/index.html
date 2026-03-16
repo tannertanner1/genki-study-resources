@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Practice: だれのNoun - Lesson 2 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: だれのNoun - Lesson 2 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: だれのNoun - Lesson 2 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: だれのNoun - Lesson 2 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Ask and answer whose item it is.">
+    <meta property="og:description" content="Ask and answer whose item it is.">
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
+
+    <meta name="keywords" content="Genki I, page 73, problem V, japanese, quizzes, exercises, 3rd Edition" lang="en">
+    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="Genki Study Resources">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-2/grammar-8/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@SethC1995">
+
+    <link rel="stylesheet" href="/resources/css/stylesheet.min.css">
+    <script src="/resources/javascript/head.min.js"></script>
+    <script src="/resources/javascript/ga.js" async></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
+    </header>
+
+    <div id="announcement">
+      <div id="announce-inner">
+        <h3><i class="fa">&#xf0a1;</i> News and Info</h3>
+        <div id="announce-list">
+          <div id="announcement-controls" style="display:none;">
+            <button class="button announce-controls button-left" onclick="GenkiAnn.next(-1, true);"><i class="fa">&#xf060;</i></button>
+            <button class="button announce-controls button-right" onclick="GenkiAnn.next(+1, true);"><i class="fa">&#xf061;</i></button>
+          </div>
+          <noscript><div class="announcement">Please enable JavaScript to get the latest news and info.</div></noscript>
+        </div>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="exercise" class="content-block">
+        <div id="quiz-result"></div>
+        <div id="quiz-zone" class="clear"></div>
+        <div id="quiz-timer" class="center"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
+    </footer>
+
+    <script src="/resources/javascript/dragula.min.js"></script>
+    <script src="/resources/javascript/easytimer.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
+    <script src="/resources/javascript/genki.min.js"></script>
+    <script src="/resources/javascript/all.min.js"></script>
+    <script>Genki.generateQuiz({
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : '1-5: Look at the item and ask whose it is using {!GRI|だれの|l2-p4}.<br>6-10: Answer who the item belongs to.',
+
+      quizlet : [
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'Shoes',
+            answers : [
+              'Aこれはだれのくつですか。',
+              'これはくつのだれですか。',
+              'これはだれのかさですか。',
+              'これはかさのだれですか。'
+            ]
+          },
+
+          {
+            question : 'Umbrella',
+            answers : [
+              'Aこれはだれのかさですか。',
+              'だれはこれのかさですか。',
+              'これはだれのくつですか。',
+              'だれはこれのくつですか。'
+            ]
+          },
+
+          {
+            question : 'Book',
+            answers : [
+              'Aこれはだれのほんですか。',
+              'だれはこれのほんですか。',
+              'これはだれのぼうしですか。',
+              'だれはこれのぼうしですか。'
+            ]
+          },
+
+          {
+            question : 'Bag',
+            answers : [
+              'Aこれはだれのかばんですか。',
+              'これはかばんのだれですか。',
+              'これはだれのさいふですか。',
+              'これはさいふのだれですか。'
+            ]
+          },
+
+          {
+            question : 'Bicycle',
+            answers : [
+              'Aこれはだれのじてんしゃですか。',
+              'だれはこれのじてんしゃですか。',
+              'これはだれのしんぶんですか。',
+              'だれはこれのしんぶんですか。'
+            ]
+          },
+
+          {
+            question : 'これはだれのぼうしですか。<br>Owner: Takeshi',
+            answers : [
+              'Aたけしさんのぼうしです。',
+              'ぼうしのたけしさんです。',
+              'だれのぼうしです。',
+              'ぼうしのだれです。'
+            ]
+          },
+
+          {
+            question : 'これはだれのかばんですか。<br>Owner: Naomi',
+            answers : [
+              'Aナオミさんのかばんです。',
+              'かばんのナオミさんです。',
+              'ナオミさんのさいふです。',
+              'さいふのナオミさんです。'
+            ]
+          },
+
+          {
+            question : 'これはだれのスマホですか。<br>Owner: Mary',
+            answers : [
+              'Aメアリーさんのスマホです。',
+              'スマホのメアリーさんです。',
+              'メアリーさんのノートです。',
+              'ノートのメアリーさんです。'
+            ]
+          },
+
+          {
+            question : 'これはだれのぼうしですか。<br>Owner: Naomi',
+            answers : [
+              'Aナオミさんのぼうしです。',
+              'ぼうしのナオミさんです。',
+              'だれのぼうしです。',
+              'ぼうしのだれです。'
+            ]
+          },
+
+          {
+            question : 'これはだれのTシャツですか。<br>Owner: Karurosu',
+            answers : [
+              'AカルロスさんのTシャツです。',
+              'Tシャツのカルロスさんです。',
+              'カルロスさんのジーンズです。',
+              'ジーンズのカルロスさんです。'
+            ]
+          },
+        ],
+
+
+        // WRITTEN
+        '<div class="count-problems">'+
+          '<div class="columns-2 clear">'+
+            '<div>'+
+              '<h4>Ask whose item it is</h4>'+
+              '<div class="problem">'+
+                'Shoes<br>'+
+                'これは{だれ|誰|answer}の{くつ|靴|answer}ですか。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'Umbrella<br>'+
+                '{これはだれのかさですか|これはだれの傘ですか|' + Genki.getAlts('これは{だれ}の{傘}ですか', '誰|かさ') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'Book<br>'+
+                '{これはだれのほんですか|これはだれの本ですか|' + Genki.getAlts('これは{だれ}の{本}ですか', '誰|ほん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'Bag<br>'+
+                '{これはだれのかばんですか|これはだれの鞄ですか|' + Genki.getAlts('これは{だれ}の{鞄}ですか', '誰|かばん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'Bicycle<br>'+
+                '{これはだれのじてんしゃですか|これはだれの自転車ですか|' + Genki.getAlts('これは{だれ}の{自転車}ですか', '誰|じてんしゃ') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+
+            '<div>'+
+              '<h4>Answer who the item belongs to</h4>'+
+              '<div class="problem">'+
+                'これはだれのぼうしですか。(たけし)<br>'+
+                '{たけしさん}の{ぼうし|帽子|answer}です。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはだれのかばんですか。(ナオミ)<br>'+
+                '{ナオミさんのかばんです|ナオミさんの鞄です|answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはだれのスマホですか。(メアリー)<br>'+
+                '{メアリーさんのスマホです}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはだれのぼうしですか。(ナオミ)<br>'+
+                '{ナオミさんのぼうしです|ナオミさんの帽子です|answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'これはだれのTシャツですか。(カルロス)<br>'+
+                '{カルロスさんの%(T/Ｔ)シャツです}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+      ]
+    });</script>
+  </body>
+</html>

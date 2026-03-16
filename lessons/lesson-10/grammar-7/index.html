@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: で行きます - Lesson 10 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: で行きます - Lesson 10 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: で行きます - Lesson 10 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: で行きます - Lesson 10 | Genki Study Resources - 2nd Edition">
-    <meta name="description" content="Use the table below to figure out the means of transportation to answer the questions.">
-    <meta property="og:description" content="Use the table below to figure out the means of transportation to answer the questions.">
+    <title>Practice: Adjective + なる 2 - Lesson 10 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: Adjective + なる 2 - Lesson 10 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: Adjective + なる 2 - Lesson 10 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: Adjective + なる 2 - Lesson 10 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Read the dialogue and fill in the blanks.">
+    <meta property="og:description" content="Read the dialogue and fill in the blanks.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I, page 245, problem VII-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki I, page 245, problem V-B, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-10/grammar-7/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-10/grammar-7/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,187 +55,137 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Use the table below to figure out the {!GRI|means of transportation|l10-p7} to answer the questions.<br><br>'+
-      '<table class="center">'+
-        '<tr style="font-weight:bold;">'+
-          '<td>Origin</td>'+
-          '<td>Destination</td>'+
-          '<td>Transportation</td>'+
-          '<td>Time to Destination</td>'+
-        '</tr>'+
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Read the dialogue and fill in the blanks. {!GRI|Click here|l10-p5} to review Adjective+なる.',
 
-        '<tr>'+
-          '<td>うち</td>'+
-          '<td>駅</td>'+
-          '<td>自転車</td>'+
-          '<td>十分</td>'+
-        '</tr>'+
-
-        '<tr>'+
-          '<td>うち</td>'+
-          '<td>学校</td>'+
-          '<td>バス</td>'+
-          '<td>四十分</td>'+
-        '</tr>'+
-
-        '<tr>'+
-          '<td>うち</td>'+
-          '<td>バス停</td>'+
-          '<td>歩いて（あるいて）</td>'+
-          '<td>二十分</td>'+
-        '</tr>'+
-
-        '<tr>'+
-          '<td>うち</td>'+
-          '<td>会社</td>'+
-          '<td>車</td>'+
-          '<td>一時間</td>'+
-        '</tr>'+
-
-        '<tr>'+
-          '<td>横浜（よこはま）</td>'+
-          '<td>東京</td>'+
-          '<td>電車</td>'+
-          '<td>三十分</td>'+
-        '</tr>'+
-
-        '<tr>'+
-          '<td>会社</td>'+
-          '<td>デパート</td>'+
-          '<td>地下鉄（ちかてつ）</td>'+
-          '<td>十五分</td>'+
-        '</tr>'+
-
-        '<tr>'+
-          '<td>名古屋（なごや）</td>'+
-          '<td>東京</td>'+
-          '<td>新幹線</td>'+
-          '<td>二時間</td>'+
-        '</tr>'+
-
-        '<tr>'+
-          '<td>日本</td>'+
-          '<td>ハワイ</td>'+
-          '<td>飛行機（ひこうき）</td>'+
-          '<td>八時間</td>'+
-        '</tr>'+
-
-        '<tr>'+
-          '<td>日本</td>'+
-          '<td>インドネシア</td>'+
-          '<td>船（ふね）</td>'+
-          '<td>一週間（いっしゅうかん）</td>'+
-        '</tr>'+
-      '</table>',
-
+      questionsAlignLeft : true,
       quizlet : [
-        {
-          question : 'うちから駅までどうやって行きますか。',
-          answers : [
-            'Aうちから駅まで自転車で行きます。',
-            'うちから駅まで自転車に行きます。',
-            'うちから駅まで電車で行きます。',
-            'うちから駅まで電車に行きます。'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'A：ちょっと<ruby>寒<rt>さむ</rt></ruby>いですね。<br>'+
+                       'B：エアコンをつけたから、すぐ_____なりますよ。',
+            answers : [
+              'A<ruby>暖<rt>あたた</rt></ruby>かく',
+              '<ruby>暖<rt>あたた</rt></ruby>かいに',
+              '<ruby>寒<rt>さむ</rt></ruby>く',
+              '<ruby>寒<rt>さむ</rt></ruby>いに'
+            ]
+          },
 
-        {
-          question : 'うちから学校までどうやって行きますか。',
-          answers : [
-            'Aうちから学校までバスで行きます。',
-            'うちから学校までバスに行きます。',
-            'うちから学校まで車で行きます。',
-            'うちから学校まで車に行きます。'
-          ]
-        },
+          {
+            question :　'A：<ruby>髪<rt>かみ</rt></ruby>が_____なりましたね。<br>'+
+                      　'B：ええ、きのう、<ruby>美容院<rt>びよういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。',
+            answers : [
+              'A<ruby>短<rt>みじか</rt></ruby>く',
+              '<ruby>短<rt>みじか</rt></ruby>いに',
+              'Aきれいに',
+              'きれく'
+            ]
+          },
 
-        {
-          question : 'うちからバス停までどうやって行きますか。',
-          answers : [
-            'Aうちからバス停まで歩いて行きます。',
-            'うちからバス停まで歩いてで行きます。',
-            'うちからバス停まで自転車で行きます。',
-            'うちからバス停まで自転車に行きます。'
-          ]
-        },
+          {
+            question : 'A：<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>野菜<rt>やさい</rt></ruby>がきらいでした。<br>'+
+                       'B：<ruby>私<rt>わたし</rt></ruby>もきらいでした。でも<ruby>今<rt>いま</rt></ruby>は_____なりました。',
+            answers : [
+              'A<ruby>好<rt>す</rt></ruby>きに',
+              '<ruby>好<rt>す</rt></ruby>きく',
+              'きらいに',
+              'きらく'
+            ]
+          },
 
-        {
-          question : 'うちから会社までどうやって行きますか。',
-          answers : [
-            'Aうちから会社まで車で行きます。',
-            'うちから会社まで車に行きます。',
-            'うちから会社まで電車で行きます。',
-            'うちから会社まで電車に行きます。'
-          ]
-        },
+          {
+            question : 'A：たくさんお<ruby>酒<rt>さけ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みました。<br>'+
+                       'B：そうですね。<ruby>顔<rt>かお</rt></ruby>が_____なりましたね。',
+            answers : [
+              'A<ruby>赤<rt>あか</rt></ruby>く',
+              '<ruby>赤<rt>あか</rt></ruby>いに',
+              '<ruby>青<rt>あお</rt></ruby>く',
+              '<ruby>青<rt>あお</rt></ruby>いに'
+            ]
+          },
 
-        {
-          question : '横浜から東京までどうやって行きますか。',
-          answers : [
-            'A横浜から東京まで電車で行きます。',
-            '横浜から東京まで電車に行きます。',
-            '横浜から東京まで車で行きます。',
-            '横浜から東京まで車に行きます。'
-          ]
-        },
+          {
+            question : 'A：このごろ_____なりましたね。<br>'+
+                       'B：ええ、もう<ruby>冬<rt>ふゆ</rt></ruby>ですね。',
+            answers : [
+              'A<ruby>寒<rt>さむ</rt></ruby>く',
+              '<ruby>寒<rt>さむ</rt></ruby>いに',
+              '<ruby>暖<rt>あたた</rt></ruby>かく',
+              '<ruby>暖<rt>あたた</rt></ruby>かいに',
+            ]
+          },
 
-        {
-          question : '会社からデパートまでどうやって行きますか。',
-          answers : [
-            'A会社からデパートまで地下鉄で行きます。',
-            '会社からデパートまで地下鉄に行きます。',
-            '会社からデパートまで新幹線で行きます。',
-            '会社からデパートまで新幹線に行きます。'
-          ]
-        },
+          {
+            question : 'A：<ruby>日本語<rt>にほんご</rt></ruby>が_____なりましたね。<br>'+
+                       'B：ありがとうございます。でも、まだまだです。<small>(I have a long way to go.)</small>',
+            answers : [
+              'A<ruby>上手<rt>じょうず</rt></ruby>に',
+              '<ruby>上手<rt>じょうず</rt></ruby>く',
+              '<ruby>下手<rt>へた</rt></ruby>に',
+              '<ruby>下手<rt>へた</rt></ruby>く'
+            ]
+          }
+        ],
 
-        {
-          question : '名古屋から東京までどうやって行きますか。',
-          answers : [
-            'A名古屋から東京まで新幹線で行きます。',
-            '名古屋から東京まで新幹線に行きます。',
-            '名古屋から東京まで地下鉄で行きます。',
-            '名古屋から東京まで地下鉄に行きます。'
-          ]
-        },
 
-        {
-          question : '日本からハワイまでどうやって行きますか。',
-          answers : [
-            'A日本からハワイまで飛行機で行きます。',
-            '日本からハワイまで飛行機に行きます。',
-            '日本からハワイまで新幹線で行きます。',
-            '日本からハワイまで新幹線に行きます。'
-          ]
-        },
+        // WRITTEN
+        '<div class="count-problems">'+
+          '<div class="problem">'+
+            '<div class="inner-problem valign-top">'+
+              'A：ちょっと<ruby>寒<rt>さむ</rt></ruby>いですね。<br><br><br>'+
+              'B：エアコンをつけたから、すぐ{暖かく|あたたかく|answer}なりますよ。'+
+            '</div>'+
+          '</div>'+
 
-        {
-          question : '日本からインドネシアまでどうやって行きますか。',
-          answers : [
-            'A日本からインドネシアまで船で行きます。',
-            '日本からインドネシアまで船に行きます。',
-            '日本からインドネシアまで車で行きます。',
-            '日本からインドネシアまで車に行きます。'
-          ]
-        }
+          '<div class="problem">'+
+            '<div class="inner-problem valign-top">'+
+              'A：<ruby>髪<rt>かみ</rt></ruby>が{きれいに|短く|みじかく|綺麗に|answer}なりましたね。<br><br><br>'+
+              'B：ええ、きのう、<ruby>美容院<rt>びよういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem valign-top">'+
+              'A：<ruby>子供<rt>こども</rt></ruby>の<ruby>時<rt>とき</rt></ruby>、<ruby>野菜<rt>やさい</rt></ruby>がきらいでした。<br><br><br>'+
+              'B：<ruby>私<rt>わたし</rt></ruby>もきらいでした。でも<ruby>今<rt>いま</rt></ruby>は{好きに|すきに|answer}なりました。'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem valign-top">'+
+              'A：たくさんお<ruby>酒<rt>さけ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みました。<br><br><br>'+
+              'B：そうですね。<ruby>顔<rt>かお</rt></ruby>が{赤く|あかく|answer}なりましたね。'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem valign-top">'+
+              'A：このごろ{寒く|さむく|answer}なりましたね。<br><br><br>'+
+              'B：ええ、もう<ruby>冬<rt>ふゆ</rt></ruby>ですね。'+
+            '</div>'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<div class="inner-problem valign-top">'+
+              'A：<ruby>日本語<rt>にほんご</rt></ruby>が{上手に|じょうずに|answer}なりましたね。<br><br><br>'+
+              'B：ありがとうございます。でも、まだまだです。<small>(I have a long way to go.)</small>'+
+            '</div>'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>

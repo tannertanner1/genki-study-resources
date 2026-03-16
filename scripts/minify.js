@@ -22,7 +22,7 @@ const PAIRS = [
   ["resources/javascript/head.js", "resources/javascript/head.min.js"],
   ["resources/javascript/homepage.js", "resources/javascript/homepage.min.js"],
   ["resources/javascript/grammar-index.js", "resources/javascript/grammar-index.min.js"],
-  ["resources/javascript/exercises/3rd-ed.js", "resources/javascript/exercises/3rd-ed.min.js"],
+  ["resources/javascript/exercises/exercises.js", "resources/javascript/exercises/exercises.min.js"],
 ]
 
 function needsUpdate(srcPath, minPath) {

@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: ほしい (Present) - Lesson 14 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: ほしい (Present) - Lesson 14 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: ほしい (Present) - Lesson 14 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: ほしい (Present) - Lesson 14 | Genki Study Resources - 2nd Edition">
-    <meta name="description" content="Items marked with O are what you want, and items marked with X are what you do not want. Make sentences using ほしい.">
-    <meta property="og:description" content="Items marked with O are what you want, and items marked with X are what you do not want. Make sentences using ほしい.">
+    <title>Practice: ほしい (Present) - Lesson 14 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: ほしい (Present) - Lesson 14 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: ほしい (Present) - Lesson 14 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: ほしい (Present) - Lesson 14 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="You are looking at an award gift catalog. Say whether you want or do not want each of the items below.">
+    <meta property="og:description" content="You are looking at an award gift catalog. Say whether you want or do not want each of the items below.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II, page 61, problem I-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki II, page 57, problem I-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-14/grammar-1/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-14/grammar-1/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,89 +55,124 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Items marked with O are what you want, and items marked with X are what you do not want. Make sentences using {!GRI|ほしい|l14-p1}.',
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'You are looking at an award gift catalog. Say whether you want or do not want each of the items below, using {!GRI|ほしい|l14-p1}.',
 
       quizlet : [
-        {
-          question : '[O] Book',
-          answers : [
-            'A本がほしいです。',
-            '本をほしいです。',
-            '本がほしかったです。'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'チョコレート',
+            answers : [
+              'Aチョコレートがほしいです。',
+              'チョコレートをほしいです。',
+              'Aチョコレートがほしくないです。',
+              'チョコレートをほしくないです。'
+            ]
+          },
 
-        {
-          question : '[X] Winter Scarf',
-          answers : [
-            'Aマフラーがほしくないです。',
-            'マフラーをほしくないです。',
-            'マフラーがほしくなかったです。'
-          ]
-        },
+          {
+            question : 'マフラー',
+            answers : [
+              'Aマフラーがほしいです。',
+              'マフラーがほしかったです。',
+              'Aマフラーがほしくないです。',
+              'マフラーがほしくなかったです。'
+            ]
+          },
 
-        {
-          question : '[O] Money',
-          answers : [
-            'Aお金がほしいです。',
-            'お金をほしいです。',
-            'お金がほしかったです。'
-          ]
-        },
+          {
+            question : '<ruby>化粧品<rt>けしょうひん</rt></ruby>',
+            answers : [
+              'A<ruby>化粧品<rt>けしょうひん</rt></ruby>がほしいです。',
+              '<ruby>化粧品<rt>けしょうひん</rt></ruby>かほしいです。',
+              'A<ruby>化粧品<rt>けしょうひん</rt></ruby>がほしくないです。',
+              '<ruby>化粧品<rt>けしょうひん</rt></ruby>かほしくないです。'
+            ]
+          },
 
-        {
-          question : '[X] Sweater',
-          answers : [
-            'Aセーターがほしくないです。',
-            'セーターをほしくないです。',
-            'セーターがほしくなかったです。'
-          ]
-        },
+          {
+            question : 'パソコン',
+            answers : [
+              'Aパソコンがほしいです。',
+              'パソコンがはしいです。',
+              'Aパソコンがほしくないです。',
+              'パソコンがはしくないです。'
+            ]
+          },
 
-        {
-          question : '[X] Personal Computer',
-          answers : [
-            'Aパソコンがほしくないです。',
-            'パソコンをほしくないです。',
-            'パソコンがほしいです。'
-          ]
-        },
+          {
+            question : 'お<ruby>皿<rt>さら</rt></ruby>',
+            answers : [
+              'Aお<ruby>皿<rt>さら</rt></ruby>がほしいです。',
+              'お<ruby>茶<rt>ちゃ</rt></ruby>がほしいです。',
+              'Aお<ruby>皿<rt>さら</rt></ruby>がほしくないです。',
+              'お<ruby>茶<rt>ちゃ</rt></ruby>がほしくないです。'
+            ]
+          },
 
-        {
-          question : '[O] Motorcycle',
-          answers : [
-            'Aバイクがほしいです。',
-            'バイクがほしくないです。',
-            'バイクをほしくないです。'
-          ]
-        },
+          {
+            question : '<ruby>自転車<rt>じてんしゃ</rt></ruby>',
+            answers : [
+              'A<ruby>自転車<rt>じてんしゃ</rt></ruby>がほしいです。',
+              '<ruby>自動車<rt>じどうしゃ</rt></ruby>がほしいです。',
+              'A<ruby>自転車<rt>じてんしゃ</rt></ruby>がほしくないです。',
+              '<ruby>自動車<rt>じどうしゃ</rt></ruby>がほしくないです。'
+            ]
+          }
+        ],
 
-        {
-          question : '[X] Stuffed Animal',
-          answers : [
-            'Aぬいぐるみがほしくないです。',
-            'ぬいぐるみがほしいです。',
-            'ぬいぐるみをほしいです。'
-          ]
-        }
+
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'チョコレート<br>'+
+            '<i class="fa">&#xf061;</i>　チョコレートがほしいです。／チョコレートがほしくないです。'+
+          '</div>'+
+        '</div>'+
+
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              'マフラー<br>'+
+              '{マフラーがほしいです|マフラーがほしくないです|' + Genki.getAlts('マフラーが{ほ}し{くな}いです', '欲|') + 'answer;width:300}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>化粧品<rt>けしょうひん</rt></ruby><br>'+
+              '{化粧品がほしいです|化粧品がほしくないです|' + Genki.getAlts('{化粧品}が{ほ}し{くな}いです', 'けしょうひん|欲|') + 'answer;width:300}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'パソコン<br>'+
+              '{パソコンがほしいです|パソコンがほしくないです|' + Genki.getAlts('パソコンが{ほ}し{くな}いです', '欲|') + 'answer;width:300}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              'お<ruby>皿<rt>さら</rt></ruby><br>'+
+              '{お皿がほしいです|お皿がほしくないです|' + Genki.getAlts('{お}{皿}が{ほ}し{くな}いです', '|さら|欲|') + 'answer;width:300}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>自転車<rt>じてんしゃ</rt></ruby><br>'+
+              '{自転車がほしいです|自転車がほしくないです|' + Genki.getAlts('{自転車}が{ほ}し{くな}いです', 'じてんしゃ|欲|') + 'answer;width:300}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>

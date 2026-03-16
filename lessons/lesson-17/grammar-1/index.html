@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: ～そうです (I hear) - Lesson 17 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: ～そうです (I hear) - Lesson 17 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: ～そうです (I hear) - Lesson 17 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: ～そうです (I hear) - Lesson 17 | Genki Study Resources - 2nd Edition">
-    <meta name="description" content="Listen to Sue\'s story and report it using ～そうです.">
-    <meta property="og:description" content="Listen to Sue\'s story and report it using ～そうです.">
+    <title>Practice: ～そうです (I hear) - Lesson 17 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: ～そうです (I hear) - Lesson 17 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: ～そうです (I hear) - Lesson 17 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: ～そうです (I hear) - Lesson 17 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Read Takashi's and Naomi's social media posts and report them using ～そうです.">
+    <meta property="og:description" content="Read Takashi's and Naomi's social media posts and report them using ～そうです.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II, page 129, problem I-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki II, page 125, problem I-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-17/grammar-1/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-17/grammar-1/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,125 +55,188 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Listen to Sue\'s story and report it using {!GRI|～そうです|l17-p1}.',
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Read Takashi\'s and Naomi\'s social media posts and report them using {!GRI|～そうです|l17-p1}.',
 
       quizlet : [
-        {
-          question : 'きのう宝くじを買いました。',
-          answers : [
-            'Aきのう宝くじを買ったそうです。',
-            'きのう宝くじを買うそうです。',
-            'きのう宝くじを買ってそうです。'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'たけし：<ruby>就職<rt>しゅうしょく</rt></ruby>しました！',
+            answers : [
+              'A<ruby>就職<rt>しゅうしょく</rt></ruby>したそうです。',
+              '<ruby>就職<rt>しゅうしょく</rt></ruby>するそうです。',
+              '<ruby>就職<rt>しゅうしょく</rt></ruby>しそうです。',
+              '<ruby>就職<rt>しゅうしょく</rt></ruby>すたそうです。'
+            ]
+          },
 
-        {
-          question : 'きのうは暖かかったです。',
-          answers : [
-            'Aきのうは暖かかったそうです。',
-            'きのうは暖かいそうです。',
-            'きのうは暖かいだったそうです。'
-          ]
-        },
+          {
+            question : 'たけし：<ruby>今<rt>いま</rt></ruby>、サラリーマンです。',
+            answers : [
+              'A<ruby>今<rt>いま</rt></ruby>、サラリーマンだそうです。',
+              '<ruby>今<rt>いま</rt></ruby>、サラリーマンだったそうです。',
+              '<ruby>今<rt>いま</rt></ruby>、サラリーマンそうです。',
+              '<ruby>今<rt>いま</rt></ruby>、サラリーマンなそうです。'
+            ]
+          },
 
-        {
-          question : 'きのう京都に行って、友だちに会いました。',
-          answers : [
-            'Aきのう京都に行って、友だちに会ったそうです。',
-            'きのう京都に行って、友だちに会うそうです。',
-            'きのう京都に行って、友だちに会たそうです。'
-          ]
-        },
+          {
+            question : 'たけし：<ruby>仕事<rt>しごと</rt></ruby>はすごく<ruby>大変<rt>たいへん</rt></ruby>です。',
+            answers : [
+              'A<ruby>仕事<rt>しごと</rt></ruby>はすごく<ruby>大変<rt>たいへん</rt></ruby>だそうです。',
+              '<ruby>仕事<rt>しごと</rt></ruby>はすごく<ruby>大変<rt>たいへん</rt></ruby>だったそうです。',
+              '<ruby>仕事<rt>しごと</rt></ruby>はすごく<ruby>大変<rt>たいへん</rt></ruby>そうです。',
+              '<ruby>仕事<rt>しごと</rt></ruby>はすごく<ruby>大変<rt>たいへん</rt></ruby>なそうです。'
+            ]
+          },
 
-        {
-          question : '友だちは大学院の学生です。',
-          answers : [
-            'A友だちは大学院の学生だそうです。',
-            '友だちは大学院の学生だったそうです。',
-            '友だちは大学院の学生そうです。'
-          ]
-        },
+          {
+            question : 'たけし：<ruby>寝<rt>ね</rt></ruby>る<ruby>時間<rt>じかん</rt></ruby>がありません。',
+            answers : [
+              'A<ruby>寝<rt>ね</rt></ruby>る<ruby>時間<rt>じかん</rt></ruby>がないそうです。',
+              '<ruby>寝<rt>ね</rt></ruby>る<ruby>時間<rt>じかん</rt></ruby>があらないそうです。',
+              '<ruby>寝<rt>ね</rt></ruby>る<ruby>時間<rt>じかん</rt></ruby>があるそうです。',
+              '<ruby>寝<rt>ね</rt></ruby>る<ruby>時間<rt>じかん</rt></ruby>がありませんそうです。'
+            ]
+          },
 
-        {
-          question : '友だちは元気でした。',
-          answers : [
-            'A友だちは元気だったそうです。',
-            '友だちは元気だそうです。',
-            '友だちは元気そうです。'
-          ]
-        },
+          {
+            question : 'たけし：<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>えません。',
+            answers : [
+              'A<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>えないそうです。',
+              '<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>えなかったそうです。',
+              '<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>えませんそうです。',
+              '<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>えるそうです。'
+            ]
+          },
 
-        {
-          question : '友だちと映画を見に行きました。',
-          answers : [
-            'A友だちと映画を見に行ったそうです。',
-            '友だちと映画を見に行ってそうです。',
-            '友だちと映画を見に行くそうです。'
-          ]
-        },
+          {
+            question : 'ナオミ：<ruby>横浜<rt>よこはま</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。',
+            answers : [
+              'A<ruby>横浜<rt>よこはま</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったそうです。',
+              '<ruby>横浜<rt>よこはま</rt></ruby>に<ruby>行<rt>い</rt></ruby>くそうです。',
+              '<ruby>横浜<rt>よこはま</rt></ruby>に<ruby>行<rt>い</rt></ruby>きそうです。',
+              '<ruby>横浜<rt>よこはま</rt></ruby>に<ruby>行<rt>い</rt></ruby>きましたそうです。'
+            ]
+          },
 
-        {
-          question : '映画館は込んでいました。',
-          answers : [
-            'A映画館は込んでいたそうです。',
-            '映画館は込んでいるそうです。',
-            '映画館は込んでいったそうです。'
-          ]
-        },
+          {
+            question : 'ナオミ：<ruby>中華街<rt>ちゅうかがい</rt></ruby>は<ruby>混<rt>こ</rt></ruby>んでいました。',
+            answers : [
+              'A<ruby>中華街<rt>ちゅうかがい</rt></ruby>は<ruby>混<rt>こ</rt></ruby>んでいたそうです。',
+              '<ruby>中華街<rt>ちゅうかがい</rt></ruby>は<ruby>混<rt>こ</rt></ruby>んでいるそうです。',
+              '<ruby>中華街<rt>ちゅうかがい</rt></ruby>は<ruby>混<rt>こ</rt></ruby>んでそうです。',
+              '<ruby>中華街<rt>ちゅうかがい</rt></ruby>は<ruby>混<rt>こ</rt></ruby>んでいましたそうです。'
+            ]
+          },
 
-        {
-          question : '映画はあまりおもしろくなかったです。',
-          answers : [
-            'A映画はあまりおもしろくなかったそうです。',
-            '映画はあまりおもしろくないそうです。',
-            '映画はあまりおもしろかったそうです。'
-          ]
-        },
+          {
+            question : 'ナオミ：ラーメンを<ruby>食<rt>た</rt></ruby>べました。',
+            answers : [
+              'Aラーメンを<ruby>食<rt>た</rt></ruby>べたそうです。',
+              'ラーメンを<ruby>食<rt>た</rt></ruby>べそうです。',
+              'ラーメンを<ruby>食<rt>た</rt></ruby>べるそうです。',
+              'ラーメンを<ruby>食<rt>た</rt></ruby>べましたそうです。'
+            ]
+          },
 
-        {
-          question : 'その後、一緒に買い物をしました。',
-          answers : [
-            'Aその後、一緒に買い物をしたそうです。',
-            'その後、一緒に買い物をしるそうです。',
-            'その後、一緒に買い物をしったそうです。'
-          ]
-        },
+          {
+            question : 'ナオミ：ラーメンはおいしかったです。',
+            answers : [
+              'Aラーメンはおいしかったそうです。',
+              'ラーメンはおいしいそうです。',
+              'ラーメンはおいしかっただそうです。',
+              'ラーメンはおいしくなかったそうです。'
+            ]
+          },
 
-        {
-          question : '何も買いませんでした。',
-          answers : [
-            'A何も買わなかったそうです。',
-            '何も買うそうです。',
-            '何も買あなかったそうです。'
-          ]
-        },
+          {
+            question : 'ナオミ：おみやげは<ruby>買<rt>か</rt></ruby>いませんでした。',
+            answers : [
+              'Aおみやげは<ruby>買<rt>か</rt></ruby>わなかったそうです。',
+              'おみやげは<ruby>買<rt>か</rt></ruby>わないそうです。',
+              'おみやげは<ruby>買<rt>か</rt></ruby>ったそうです。',
+              'おみやげは<ruby>買<rt>か</rt></ruby>いませんだったそうです。'
+            ]
+          }
+        ],
 
-        {
-          question : 'きのうはぜんぜん英語を話しませんでした。',
-          answers : [
-            'Aきのうはぜんぜん英語を話さなかったそうです。',
-            'きのうはぜんぜん英語を話しなかったそうです。',
-            'きのうはぜんぜん英語を話すそうです。'
-          ]
-        }
+
+        // WRITTEN
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<p class="section-desc">たけし<br>10月25日</p>'+
+            '<div class="example-problem">'+
+              '<div class="inner-problem">'+
+                '<ruby>就職<rt>しゅうしょく</rt></ruby>しました！<br>'+
+                '<i class="fa">&#xf061;</i>　(たけしさんは)<ruby>就職<rt>しゅうしょく</rt></ruby>したそうです。'+
+              '</div>'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>今<rt>いま</rt></ruby>、サラリーマンです。<br>'+
+              '{%(たけしさんは/)今、サラリーマンだそうです|%(たけしさんは/)いま、サラリーマンだそうです|answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>仕事<rt>しごと</rt></ruby>はすごく<ruby>大変<rt>たいへん</rt></ruby>です。<br>'+
+              '{%(たけしさんは/)仕事はすごく大変だそうです|%(たけしさんは/)しごとはすごくたいへんだそうです|' + Genki.getAlts('{たけしさんは}{仕事}はすごく{大変}だそうです', '|しごと|たいへん') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>寝<rt>ね</rt></ruby>る<ruby>時間<rt>じかん</rt></ruby>がありません。<br>'+
+              '{%(たけしさんは/)寝る時間がないそうです|%(たけしさんは/)ねるじかんがないそうです|' + Genki.getAlts('{たけしさんは}{寝}る{時間}がないそうです', '|ね|じかん') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>えません。<br>'+
+              '{%(たけしさんは/)彼女に会えないそうです|%(たけしさんは/)かのじょにあえないそうです|' + Genki.getAlts('{たけしさんは}{彼女}に{会}えないそうです', '|かのじょ|あ') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<p class="section-desc">ナオミ<br>10月19日</p>'+
+            '<div class="problem">'+
+              '<ruby>横浜<rt>よこはま</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。<br>'+
+              '{%(ナオミさんは/)横浜に行ったそうです|%(ナオミさんは/)よこはまにいったそうです|' + Genki.getAlts('{ナオミさんは}{横浜}に{行}ったそうです', '|よこはま|い') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>中華街<rt>ちゅうかがい</rt></ruby>は<ruby>混<rt>こ</rt></ruby>んでいました。<br>'+
+              '{%(ナオミさんは/)中華街は混んでいたそうです|%(ナオミさんは/)ちゅうかがいはこんでいたそうです|' + Genki.getAlts('{ナオミさんは}{中華街}は{混}んでいたそうです', '|ちゅうかがい|こ') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'ラーメンを<ruby>食<rt>た</rt></ruby>べました。<br>'+
+              '{%(ナオミさんは/)ラーメンを食べたそうです|%(ナオミさんは/)ラーメンをたべたそうです|answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'ラーメンはおいしかったです。<br>'+
+              '{%(ナオミさんは/)ラーメンはおいしかったそうです}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'おみやげは<ruby>買<rt>か</rt></ruby>いませんでした。<br>'+
+              '{%(ナオミさんは/)おみやげは買わなかったそうです|%(ナオミさんは/)おみやげはかわなかったそうです|' + Genki.getAlts('{ナオミさんは}お{みやげ}は{買}わなかったそうです', '|土産|か') + 'answer}。'+
+            '</div>'+
+
+            '<p class="right">*<ruby>中華街<rt>ちゅうかがい</rt></ruby> (Chinatown)</p>'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>

@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: この, その, and あの - Lesson 2 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: この, その, and あの - Lesson 2 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: この, その, and あの - Lesson 2 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: この, その, and あの - Lesson 2 | Genki Study Resources - 2nd Edition">
-    <meta name="description" content="Read the provided information and make sentences using この, その, or あの.">
-    <meta property="og:description" content="Read the provided information and make sentences using この, その, or あの.">
+    <title>Practice: Prices - Lesson 2 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: Prices - Lesson 2 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: Prices - Lesson 2 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: Prices - Lesson 2 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Read the questions and answer how much the items are.">
+    <meta property="og:description" content="Read the questions and answer how much the items are.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I, page 72, page 73, problem III-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki I, page 67, page 68, problem I-B, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-2/grammar-2/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-2/grammar-2/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,116 +55,231 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
-      info : 'Read the provided information and make sentences using {!GRI|この, その, or あの|l2-p2}.',
+      format : 'practice',
+      type : ['multi', 'fill'],
+      info : 'Read the questions and answer how much the items are.',
 
       quizlet : [
-        {
-          question : 'Item: Pencil<br>Price: ￥60<br>Distance: Close to you',
-          answers : [
-            'Aこのえんぴつはろくじゅうえんです。',
-            'そのえんぴつはろくじゅうえんです。',
-            'あのえんぴつはろくじゅうえんです。'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'ペンはいくらですか。<br>Price: ￥80',
+            answers : [
+              'Aはちじゅうえんです。',
+              'はちじゅうです。',
+              'いちじゅうえんです。',
+              'いちじゅうです。'
+            ]
+          },
 
-        {
-          question : 'Item: Pen<br>Price: ￥290<br>Distance: Close to listener',
-          answers : [
-            'Aそのペンはにひゃくきゅうじゅうえんです。',
-            'このペンはにひゃくきゅうじゅうえんです。',
-            'あのペンはにひゃくきゅうじゅうえんです。'
-          ]
-        },
+          {
+            question : 'ノートはいくらですか。<br>Price: ￥450',
+            answers : [
+              'Aよんひゃくごじゅうえんです。',
+              'よんひゃくごじゅうです。',
+              'さんびゃくごじゅうえんです。',
+              'さんびゃくごじゅうです。'
+            ]
+          },
 
-        {
-          question : 'Item: Computer<br>Price: ￥68,000<br>Distance: Far from both',
-          answers : [
-            'Aあのコンピューターはろくまんはっせんえんです。',
-            'あのコンピューターはろくまんはちせんえんです。',
-            'そのコンピューターはろくまんはっせんえんです。'
-          ]
-        },
+          {
+            question : 'かさはいくらですか。<br>Price: ￥1,000',
+            answers : [
+              'Aせんえんです。',
+              'いちせんえんです。',
+              'いちせんです。',
+              'せんです。'
+            ]
+          },
 
-        {
-          question : 'Item: Wallet<br>Price: ￥4,300<br>Distance: Close to listener',
-          answers : [
-            'Aそのさいふはよんせんさんびゃくえんです。',
-            'そのさいふはよんせんさんひゃくえんです。',
-            'このさいふはよんせんさんびゃくえんです。'
-          ]
-        },
+          {
+            question : 'しんぶんはいくらですか。<br>Price: ￥160',
+            answers : [
+              'Aひゃくろくじゅうえんです。',
+              'ろくひゃくじゅうえんです。',
+              'ひゃくじゅうえんです。',
+              'ひゃくじゅうろくえんです。'
+            ]
+          },
 
-        {
-          question : 'Item: Dictionary<br>Price: ￥3,500<br>Distance: Close to you',
-          answers : [
-            'Aこのじしょはさんぜんごひゃくえんです。',
-            'このじしょはさんせんごひゃくえんです。',
-            'そのじしょはさんぜんごひゃくえんです。'
-          ]
-        },
+          {
+            question : 'ほんはいくらですか。<br>Price: ￥1,500',
+            answers : [
+              'Aせんごひゃくえんです。',
+              'ごせんひゃくえんです。',
+              'せんひゃくごえんです。',
+              'せんひゃくえんです。'
+            ]
+          },
 
-        {
-          question : 'Item: Bike<br>Price: ￥17,000<br>Distance: Far from both',
-          answers : [
-            'Aあのじてんしゃはいちまんななせんえんです。',
-            'あのじてんしゃはじゅうななせんえんです。',
-            'それじてんしゃはいちまんななせんえんです。'
-          ]
-        },
+          {
+            question : 'くつはいくらですか。<br>Price: ￥3,500',
+            answers : [
+              'Aさんぜんごひゃくえんです。',
+              'さんせんごひゃくえんです。',
+              'さんぜんひゃくごえんです。',
+              'よんせんごひゃくえんです。'
+            ]
+          },
 
-        {
-          question : 'Item: Watch<br>Price: ￥15,000<br>Distance: Close to you',
-          answers : [
-            'Aこのとけいはいちまんごせんえんです。',
-            'このとけいはじゅうごせんえんです。',
-            'そのとけいはいちまんごせんえんです。'
-          ]
-        },
+          {
+            question : 'とけいはいくらですか。<br>Price: ￥10,000',
+            answers : [
+              'Aいちまんえんです。',
+              'まんえんです。',
+              'じゅうせんえんです。',
+              'じゅうまんえんです。'
+            ]
+          },
 
-        {
-          question : 'Item: Bag<br>Price: ￥38,300<br>Distance: Far from both',
-          answers : [
-            'Aあのかばんはさんまんはっせんさんびゃくえんです。',
-            'あのかばんはさんまんはちせんさんびゃくえんです。',
-            'あのかばんはさんまんはっせんさんひゃくえんです。'
-          ]
-        },
+          {
+            question : 'かばんはいくらですか。<br>Price: ￥20,000',
+            answers : [
+              'Aにまんえんです。',
+              'にじゅうまんえんです。',
+              'にじゅうせんえんです。',
+              'にせんえんです。'
+            ]
+          },
 
-        {
-          question : 'Item: Shoes<br>Price: ￥3,800<br>Distance: Close to listener',
-          answers : [
-            'Aそのくつはさんぜんはっぴゃくえんです。',
-            'そのくつはさんぜんはちぴゃくえんです。',
-            'そのくつはさんぜんはっひゃくえんです。'
-          ]
-        },
+          {
+            question : 'さいふはいくらですか。<br>Price: ￥8,000',
+            answers : [
+              'Aはっせんえんです。',
+              'はちせんえんです。',
+              'はっぜんえんです。',
+              'はちぜんえんです。'
+            ]
+          },
 
-        {
-          question : 'Item: Hat<br>Price: ￥8,600<br>Distance: Close to you',
-          answers : [
-            'Aこのぼうしははっせんろっぴゃくえんです。',
-            'このぼうしははちせんろっぴゃくえんです。',
-            'このぼうしははっせんろくひゃくえんです。'
-          ]
-        }
+          {
+            question : 'ジーンズはいくらですか。<br>Price: ￥9,000',
+            answers : [
+              'Aきゅうせんえんです。',
+              'きゅうまんえんです。',
+              'じゅうせんえんです。',
+              'きゅうひゃくえんです。'
+            ]
+          },
+
+          {
+            question : 'じてんしゃはいくらですか。<br>Price: ￥25,000',
+            answers : [
+              'Aにまんごせんえんです。',
+              'にせんごまんえんです。',
+              'ごまんにせんえんです。',
+              'にじゅうごまんえんです。'
+            ]
+          },
+
+          {
+            question : 'スマホはいくらですか。<br>Price: ￥34,000',
+            answers : [
+              'Aさんまんよんせんえんです。',
+              'さんぜんよんまんえんです。',
+              'よんまんさんぜんえんです。',
+              'さんじゅうよんまんえんです。'
+            ]
+          },
+
+          {
+            question : 'ぼうしはいくらですか。<br>Price: ￥2,800',
+            answers : [
+              'Aにせんはっぴゃくえんです。',
+              'にせんはちひゃくえんです。',
+              'にせんはっびゃくえんです。',
+              'にせんはちぴゃくえんです。'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'ペンはいくらですか。(Price: ￥80)<br>'+
+            '{はちじゅう|八十|answer}えんです。'+
+          '</div>'+
+        '</div>'+
+
+        '<div class="count-problems">'+
+          '<div class="columns-2 clear">'+
+            '<div>'+
+              '<div class="problem">'+
+                'ノートはいくらですか。(Price: ￥450)<br>'+
+                '{よんひゃくごじゅうえんです|四百五十円です|' + Genki.getAlts('{四百五十}{円}です', 'よんひゃくごじゅう|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'かさはいくらですか。(Price: ￥1,000)<br>'+
+                '{せんえんです|千円です|' + Genki.getAlts('{千}{円}です', 'せん|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'しんぶんはいくらですか。(Price: ￥160)<br>'+
+                '{ひゃくろくじゅうえんです|百六十円です|' + Genki.getAlts('{百六十}{円}です', 'ひゃくろくじゅう|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'ほんはいくらですか。(Price: ￥1,500)<br>'+
+                '{せんごひゃくえんです|千五百円です|' + Genki.getAlts('{千五百}{円}です', 'せんごひゃく|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'くつはいくらですか。(Price: ￥3,500)<br>'+
+                '{さんぜんごひゃくえんです|三千五百円です|' + Genki.getAlts('{三千五百}{円}です', 'さんぜんごひゃく|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'とけいはいくらですか。(Price: ￥10,000)<br>'+
+                '{いちまんえんです|一万円です|' + Genki.getAlts('{一万}{円}です', 'いちまん|えん') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+
+            '<div>'+
+              '<div class="problem">'+
+                'かばんはいくらですか。(Price: ￥20,000)<br>'+
+                '{にまんえんです|二万円です|' + Genki.getAlts('{二万}{円}です', 'にまん|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'さいふはいくらですか。(Price: ￥8,000)<br>'+
+                '{はっせんえんです|八千円です|' + Genki.getAlts('{八千}{円}です', 'はっせん|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'ジーンズはいくらですか。(Price: ￥9,000)<br>'+
+                '{きゅうせんえんです|九千円です|' + Genki.getAlts('{九千}{円}です', 'きゅうせん|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'じてんしゃはいくらですか。(Price: ￥25,000)<br>'+
+                '{にまんごせんえんです|二万五千円です|' + Genki.getAlts('{二万五千}{円}です', 'にまんごせん|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'スマホはいくらですか。(Price: ￥34,000)<br>'+
+                '{さんまんよんせんえんです|三万四千円です|' + Genki.getAlts('{三万四千}{円}です', 'さんまんよんせん|えん') + 'answer}。'+
+              '</div>'+
+
+              '<div class="problem">'+
+                'ぼうしはいくらですか。(Price: ￥2,800)<br>'+
+                '{にせんはっぴゃくえんです|二千八百円です|' + Genki.getAlts('{二千八百}{円}です', 'にせんはっぴゃく|えん') + 'answer}。'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>

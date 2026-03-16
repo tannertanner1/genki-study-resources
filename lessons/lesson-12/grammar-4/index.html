@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: ～ほうがいいです - Lesson 12 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: ～ほうがいいです - Lesson 12 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: ～ほうがいいです - Lesson 12 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: ～ほうがいいです - Lesson 12 | Genki Study Resources - 2nd Edition">
+    <title>Practice: ～ほうがいいです - Lesson 12 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: ～ほうがいいです - Lesson 12 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: ～ほうがいいです - Lesson 12 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: ～ほうがいいです - Lesson 12 | Genki Study Resources - 3rd Edition">
     <meta name="description" content="Using the cues below, give advice to a friend who has a headache. Decide if you should use the affirmative or the negative.">
     <meta property="og:description" content="Using the cues below, give advice to a friend who has a headache. Decide if you should use the affirmative or the negative.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I, page 280, problem III-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki I, page 285, problem III-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-12/grammar-4/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-12/grammar-4/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,96 +55,138 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      format : 'practice',
+      type : ['multi', 'fill'],
       info : 'Using the cues below, {!GRI|give advice|l12-p3} to a friend who has a headache. Decide if you should use the affirmative or the negative.',
 
       quizlet : [
-        {
-          question : '薬を飲む',
-          answers : [
-            'A薬を飲んだほうがいいですよ。',
-            '薬を飲むほうがいいですよ。',
-            '薬を飲まないほうがいいですよ。',
-            '薬を飲まなかったほうがいいですよ。'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          {
+            question : '<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>む',
+            answers : [
+              'A<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んだほうがいいですよ。',
+              '<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>むほうがいいですよ。',
+              '<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>まないほうがいいですよ。',
+              '<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>まなかったほうがいいですよ。'
+            ]
+          },
 
-        {
-          question : '早く寝る',
-          answers : [
-            'A早く寝たほうがいいですよ。',
-            '早く寝るほうがいいですよ。',
-            '早く寝ないほうがいいですよ。',
-            '早く寝なかったほうがいいですよ。'
-          ]
-        },
+          {
+            question : '<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>る',
+            answers : [
+              'A<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>たほうがいいですよ。',
+              '<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>るほうがいいですよ。',
+              '<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>ないほうがいいですよ。',
+              '<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>なかったほうがいいですよ。'
+            ]
+          },
 
-        {
-          question : '遊びに行く',
-          answers : [
-            'A遊びに行かないほうがいいですよ。',
-            '遊びに行かなかったほうがいいですよ。',
-            '遊びに行ったほうがいいですよ。',
-            '遊びに行くほうがいいですよ。'
-          ]
-        },
+          {
+            question : '<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>く',
+            answers : [
+              'A<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>かないほうがいいですよ。',
+              '<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>かなかったほうがいいですよ。',
+              '<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>ったほうがいいですよ。',
+              '<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>くほうがいいですよ。'
+            ]
+          },
 
-        {
-          question : '病院に行く',
-          answers : [
-            'A病院に行ったほうがいいですよ。',
-            '病院に行くほうがいいですよ。',
-            '病院に行かないほうがいいですよ。',
-            '病院に行かなかったほうがいいですよ。'
-          ]
-        },
+          {
+            question : '<ruby>病院<rt>びょういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>く',
+            answers : [
+              'A<ruby>病院<rt>びょういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったほうがいいですよ。',
+              '<ruby>病院<rt>びょういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>くほうがいいですよ。',
+              '<ruby>病院<rt>びょういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>かないほうがいいですよ。',
+              '<ruby>病院<rt>びょういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>かなかったほうがいいですよ。'
+            ]
+          },
 
-        {
-          question : '仕事を休む',
-          answers : [
-            'A仕事を休んだほうがいいですよ。',
-            '仕事を休むほうがいいですよ。',
-            '仕事を休まないほうがいいですよ。',
-            '仕事を休まなかったほうがいいですよ。'
-          ]
-        },
+          {
+            question : '<ruby>仕事<rt>しごと</rt></ruby>を<ruby>休<rt>やす</rt></ruby>む',
+            answers : [
+              'A<ruby>仕事<rt>しごと</rt></ruby>を<ruby>休<rt>やす</rt></ruby>んだほうがいいですよ。',
+              '<ruby>仕事<rt>しごと</rt></ruby>を<ruby>休<rt>やす</rt></ruby>むほうがいいですよ。',
+              '<ruby>仕事<rt>しごと</rt></ruby>を<ruby>休<rt>やす</rt></ruby>まないほうがいいですよ。',
+              '<ruby>仕事<rt>しごと</rt></ruby>を<ruby>休<rt>やす</rt></ruby>まなかったほうがいいですよ。'
+            ]
+          },
 
-        {
-          question : 'うちに帰る',
-          answers : [
-            'Aうちに帰ったほうがいいですよ。',
-            'うちに帰るほうがいいですよ。',
-            'うちに帰らないほうがいいですよ。',
-            'うちに帰らなかったほうがいいですよ。'
-          ]
-        },
+          {
+            question : 'うちに<ruby>帰<rt>かえ</rt></ruby>る',
+            answers : [
+              'Aうちに<ruby>帰<rt>かえ</rt></ruby>ったほうがいいですよ。',
+              'うちに<ruby>帰<rt>かえ</rt></ruby>るほうがいいですよ。',
+              'うちに<ruby>帰<rt>かえ</rt></ruby>らないほうがいいですよ。',
+              'うちに<ruby>帰<rt>かえ</rt></ruby>らなかったほうがいいですよ。'
+            ]
+          },
 
-        {
-          question : '運動する',
-          answers : [
-            'A運動しないほうがいいですよ。',
-            '運動しなかったほうがいいですよ。',
-            '運動したほうがいいですよ。',
-            '運動するほうがいいですよ。'
-          ]
-        }
+          {
+            question : '<ruby>運動<rt>うんどう</rt></ruby>する',
+            answers : [
+              'A<ruby>運動<rt>うんどう</rt></ruby>しないほうがいいですよ。',
+              '<ruby>運動<rt>うんどう</rt></ruby>しなかったほうがいいですよ。',
+              '<ruby>運動<rt>うんどう</rt></ruby>したほうがいいですよ。',
+              '<ruby>運動<rt>うんどう</rt></ruby>するほうがいいですよ。'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            '<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>む　<i class="fa">&#xf061;</i>　<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んだほうがいいですよ。'+
+          '</div>'+
+        '</div>'+
+
+        '<div class="count-problems columns-2 clear">'+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>る<br>'+
+              '{早く寝たほうがいいですよ|はやくねたほうがいいですよ|' + Genki.getAlts('{早}く{寝}た{ほう}が{い}いですよ', 'はや|ね|方|良') + Genki.getAlts('{早}く{寝}た{ほう}が{よ}いですよ', 'はや|ね|方|良') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>く<br>'+
+              '{遊びに行かないほうがいいですよ|あそびにいかないほうがいいですよ|' + Genki.getAlts('{遊}びに{行}かない{ほう}が{い}いですよ', 'あそ|い|方|良') + Genki.getAlts('{遊}びに{行}かない{ほう}が{よ}いですよ', 'あそ|い|方|良') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>病院<rt>びょういん</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<br>'+
+              '{病院に行ったほうがいいですよ|びょういんにいったほうがいいですよ|' + Genki.getAlts('{病院}に{行}った{ほう}が{い}いですよ', 'びょういん|い|方|良') + Genki.getAlts('{病院}に{行}った{ほう}が{よ}いですよ', 'びょういん|い|方|良') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+
+          '<div>'+
+            '<div class="problem">'+
+              '<ruby>仕事<rt>しごと</rt></ruby>を<ruby>休<rt>やす</rt></ruby>む<br>'+
+              '{仕事を休んだほうがいいですよ|しごとをやすんだほうがいいですよ|' + Genki.getAlts('{仕事}を{休}んだ{ほう}が{い}いですよ', 'しごと|やす|方|良') + Genki.getAlts('{仕事}を{休}んだ{ほう}が{よ}いですよ', 'しごと|やす|方|良') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              'うちに<ruby>帰<rt>かえ</rt></ruby>る<br>'+
+              '{うちに帰ったほうがいいですよ|うちにかえったほうがいいですよ|' + Genki.getAlts('{うち}に{帰}った{ほう}が{い}いですよ', '家|かえ|方|良') + Genki.getAlts('{うち}に{帰}った{ほう}が{よ}いですよ', '家|かえ|方|良') + 'answer}。'+
+            '</div>'+
+
+            '<div class="problem">'+
+              '<ruby>運動<rt>うんどう</rt></ruby>する<br>'+
+              '{運動しないほうがいいですよ|うんどうしないほうがいいですよ|' + Genki.getAlts('{運動}しない{ほう}が{い}いですよ', 'うんどう|方|良') + Genki.getAlts('{運動}しない{ほう}が{よ}いですよ', 'うんどう|方|良') + 'answer}。'+
+            '</div>'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>

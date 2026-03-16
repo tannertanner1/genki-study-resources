@@ -1,17 +1,14 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+import { FlatCompat } from "@eslint/eslintrc"
+import { dirname } from "path"
+import { fileURLToPath } from "url"
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
-});
+})
 
-const eslintConfig = [
-  ...compat.config({ extends: ["prettier"]}),
-  { rules: {}, ignores: ["_private/**/*", ".pnpm-store/**/*", "javascript/**/*", "lessons-3rd/**/*"]},
-];
+const eslintConfig = [...compat.config({ extends: ["prettier"] }), { rules: {}, ignores: ["_private/**/*", ".pnpm-store/**/*", "javascript/**/*", "lessons/**/*"] }]
 
-export default eslintConfig;
+export default eslintConfig

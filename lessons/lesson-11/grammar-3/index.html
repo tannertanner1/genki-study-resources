@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: ～たり～たりする - Lesson 11 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: ～たり～たりする - Lesson 11 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: ～たり～たりする - Lesson 11 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: ～たり～たりする - Lesson 11 | Genki Study Resources - 2nd Edition">
+    <title>Practice: ～たり～たりする - Lesson 11 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: ～たり～たりする - Lesson 11 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: ～たり～たりする - Lesson 11 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: ～たり～たりする - Lesson 11 | Genki Study Resources - 3rd Edition">
     <meta name="description" content="Tell what the following people did on the weekend using ～たり～たりする.">
     <meta property="og:description" content="Tell what the following people did on the weekend using ～たり～たりする.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I, page 261, problem II-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki I, page 266, problem II-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-11/grammar-3/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-11/grammar-3/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,89 +55,135 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      format : 'practice',
+      type : ['multi', 'fill'],
       info : 'Tell what the following people did on the weekend using {!GRI|～たり～たりする|l11-p2}.',
 
       quizlet : [
-        {
-          question : 'ジョン：saw temples in Kyoto, went to a museum, etc.',
-          answers : [
-            'Aジョンさんはお寺を見たり、美術館に行ったりしました。',
-            'ジョンさんはお寺を見ったり、美術館に行ったりしました。',
-            'ジョンさんはお寺を見たり、美術館に行たりしました。'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'ジョン：went to a museum, ran, etc.',
+            answers : [
+              'Aジョンさんは<ruby>美術館<rt>びじゅつかん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったり、<ruby>走<rt>はし</rt></ruby>ったりしました。',
+              'ジョンさんは<ruby>美術館<rt>びじゅつかん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ってり、<ruby>走<rt>はし</rt></ruby>ってりしました。',
+              'ジョンさんは<ruby>美術館<rt>びじゅつかん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったり、<ruby>歩<rt>ある</rt></ruby>いたりしました。',
+              'ジョンさんは<ruby>美術館<rt>びじゅつかん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ってり、<ruby>歩<rt>ある</rt></ruby>いてりしました。'
+            ]
+          },
 
-        {
-          question : 'たけし：went camping, went for a drive, etc.',
-          answers : [
-            'Aたけしさんはキャンプに行ったり、ドライブに行ったりしました。',
-            'たけしさんはキャンプに行たり、ドライブに行ったりしました。',
-            'たけしさんはキャンプに行ったり、ドライブに行たりしました。'
-          ]
-        },
+          {
+            question : 'たけし：went camping, went for a drive, etc.',
+            answers : [
+              'Aたけしさんはキャンプに<ruby>行<rt>い</rt></ruby>ったり、ドライブに<ruby>行<rt>い</rt></ruby>ったりしました。',
+              'たけしさんはキャンプに<ruby>行<rt>い</rt></ruby>ってり、ドライブに<ruby>行<rt>い</rt></ruby>ってりしました。',
+              'たけしさんはキャンプに<ruby>行<rt>い</rt></ruby>くり、ドライブに<ruby>行<rt>い</rt></ruby>くりしました。',
+              'たけしさんはキャンプに<ruby>行<rt>い</rt></ruby>かり、ドライブに<ruby>行<rt>い</rt></ruby>かりしました。'
+            ]
+          },
 
-        {
-          question : 'きょうこ：made sweets, played games at home, etc.',
-          answers : [
-            'Aきょうこさんはお菓子を作ったり、家でゲームをしたりしました。',
-            'きょうこさんはお菓子を作たり、家でゲームをしたりしました。',
-            'きょうこさんはお菓子を作ったり、家でゲームをすたりしました。'
-          ]
-        },
+          {
+            question : 'ウデイ：made sweets, played games at home, etc.',
+            answers : [
+              'Aウデイさんはお<ruby>菓子<rt>かし</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ったり、<ruby>家<rt>いえ</rt></ruby>でゲームをしたりしました。',
+              'ウデイさんはお<ruby>菓子<rt>かし</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ってり、<ruby>家<rt>いえ</rt></ruby>でゲームをしてりしました。',
+              'ウデイさんはお<ruby>菓子<rt>かし</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ったり、<ruby>家<rt>いえ</rt></ruby>でゲームをしたりします。',
+              'ウデイさんはお<ruby>菓子<rt>かし</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ってり、<ruby>家<rt>いえ</rt></ruby>でゲームをしてりします。'
+            ]
+          },
 
-        {
-          question : 'スー：went to Osaka to have fun, went to eat, etc.',
-          answers : [
-            'Aスーさんは大阪に遊びに行ったり、食べに行ったりしました。',
-            'スーさんは大阪に遊びに行たり、食べに行ったりしました。',
-            'スーさんは大阪に遊びに行ったり、食べたりしました。'
-          ]
-        },
+          {
+            question : 'ソラ：went to Osaka to have fun, went to eat, etc.',
+            answers : [
+              'Aソラさんは<ruby>大阪<rt>おおさか</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>ったり、<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>ったりしました。',
+              'ソラさんは<ruby>大阪<rt>おおさか</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>たり、<ruby>食<rt>た</rt></ruby>べに<ruby>行<rt>い</rt></ruby>ったりしました。',
+              'ソラさんは<ruby>大阪<rt>おおさか</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>ったり、<ruby>食<rt>た</rt></ruby>べたりしました。',
+              'ソラさんは<ruby>大阪<rt>おおさか</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったり、<ruby>食<rt>た</rt></ruby>べたりしました。'
+            ]
+          },
 
-        {
-          question : 'けん：cleaned his room, did laundry, etc.',
-          answers : [
-            'Aけんさんは部屋を掃除したり、洗濯したりしました。',
-            'けんさんは部屋を掃除すたり、洗濯したりしました。',
-            'けんさんは部屋を掃除したり、洗濯したりすました。'
-          ]
-        },
+          {
+            question : 'けん：cleaned his room, did laundry, etc.',
+            answers : [
+              'Aけんさんは<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>したり、<ruby>洗濯<rt>せんたく</rt></ruby>したりしました。',
+              'けんさんは<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>してり、<ruby>洗濯<rt>せんたく</rt></ruby>してりしました。',
+              'けんさんは<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>するり、<ruby>洗濯<rt>せんたく</rt></ruby>するりしました。',
+              'けんさんは<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>すたり、<ruby>洗濯<rt>せんたく</rt></ruby>すたりしました。'
+            ]
+          },
 
-        {
-          question : 'ロバート：met friends, watched movies, etc.',
-          answers : [
-            'Aロバートさんは友だちに会ったり、映画を見たりしました。',
-            'ロバートさんは友だちに会たり、映画を見たりしました。',
-            'ロバートさんは友だちに会ったり、映画を見ったりしました。'
-          ]
-        },
+          {
+            question : 'ロバート：met friends, watched movies, etc.',
+            answers : [
+              'Aロバートさんは<ruby>友<rt>とも</rt></ruby>だちに<ruby>会<rt>あ</rt></ruby>ったり、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>たりしました。',
+              'ロバートさんは<ruby>友<rt>とも</rt></ruby>だちに<ruby>会<rt>あ</rt></ruby>ってり、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>てりしました。',
+              'ロバートさんは<ruby>友<rt>とも</rt></ruby>だちに<ruby>会<rt>あ</rt></ruby>ったり、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>たりします。',
+              'ロバートさんは<ruby>友<rt>とも</rt></ruby>だちに<ruby>会<rt>あ</rt></ruby>ってり、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>てりします。'
+            ]
+          },
 
-        {
-          question : '山下先生：went to a hot spring, rested, etc.',
-          answers : [
-            'A山下先生は温泉に行ったり、休んだりしました。',
-            '山下先生は温泉に行ったり、休んたりしました。',
-            '山下先生は温泉に行たり、休んだりしました。'
-          ]
-        }
+          {
+            question : '<ruby>山下先生<rt>やましたせんせい</rt></ruby>：went to a hot spring, rested, etc.',
+            answers : [
+              'A<ruby>山下先生<rt>やましたせんせい</rt></ruby>は<ruby>温泉<rt>おんせん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったり、<ruby>休<rt>やす</rt></ruby>んだりしました。',
+              '<ruby>山下先生<rt>やましたせんせい</rt></ruby>は<ruby>温泉<rt>おんせん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ってり、<ruby>休<rt>やす</rt></ruby>んでりしました',
+              '<ruby>山下先生<rt>やましたせんせい</rt></ruby>は<ruby>温泉<rt>おんせん</rt></ruby>に<ruby>行<rt>い</rt></ruby>くり、<ruby>休<rt>やす</rt></ruby>むりしました',
+              '<ruby>山下先生<rt>やましたせんせい</rt></ruby>は<ruby>温泉<rt>おんせん</rt></ruby>に<ruby>行<rt>い</rt></ruby>かり、<ruby>休<rt>やす</rt></ruby>まりしました'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'ジョン：went to a museum, ran, etc.<br>'+
+            '<i class="fa">&#xf061;</i>　ジョンさんは<ruby>美術館<rt>びじゅつかん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったり、<ruby>走<rt>はし</rt></ruby>ったりしました。'+
+          '</div>'+
+        '</div>'+
+
+        '<div class="count-problems">'+
+          '<div class="problem">'+
+            'たけし：went camping, went for a drive, etc.<br>'+
+            '{たけしさんはキャンプに行ったり、ドライブに行ったりしました|たけしさんはキャンプにいったり、ドライブにいったりしました|' + Genki.getAlts('たけしさんはキャンプに{行}ったり、ドライブに{行}ったりしました', 'い|い') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'ウデイ：made sweets, played games at home, etc.<br>'+
+            '{ウデイさんはお菓子を作ったり、家でゲームをしたりしました|ウデイさんはおかしをつくったり、いえでゲームをしたりしました|' + Genki.getAlts('ウデイさんはお{菓子}を{作}ったり、{家}でゲームをしたりしました', 'かし|つく|いえ') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'ソラ：went to Osaka to have fun, went to eat, etc.<br>'+
+            '{ソラさんは大阪に遊びに行ったり、食べに行ったりしました|ソラさんはおおさかにあそびにいったり、たべにいったりしました|' + Genki.getAlts('ソラさんは{大阪}に{遊}びに{行}ったり、{食}べに{行}ったりしました', 'おおさか|あそ|い|た|い') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'けん：cleaned his room, did laundry, etc.<br>'+
+            '{けんさんは部屋を掃除したり、洗濯したりしました|けんさんはへやをそうじしたり、せんたくしたりしました|' + Genki.getAlts('けんさんは{部屋}を{掃除}したり、{洗濯}したりしました', 'へや|そうじ|せんたく') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'ロバート：met friends, watched movies, etc.<br>'+
+            '{ロバートさんは友だちに会ったり、映画を見たりしました|ロバートさんはともだちにあったり、えいがをみたりしました|' + Genki.getAlts('ロバートさんは{友}{だち}に{会}ったり、{映画}を{見}たりしました', 'とも|達|あ|えいが|み') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>山下先生<rt>やましたせんせい</rt></ruby>：went to a hot spring, rested, etc.<br>'+
+            '{山下先生は温泉に行ったり、休んだりしました|やましたせんせいはおんせんにいったり、やすんだりしました|' + Genki.getAlts('{山下}{先生}は{温泉}に{行}ったり、{休}んだりしました', 'やました|せんせい|おんせん|い|やす') + 'answer}。'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>

@@ -74,7 +74,7 @@ Return value usage example: `{おはよう||width:70}`
 
 ### jisho-dupe-checker.js
 
-Checks for duplicate entries in the dictionary so that they can either be merged or removed. Execute this script in the console while viewing the [dictionary](https://sethclydesdale.github.io/genki-study-resources/lessons/appendix/dictionary/) to check for any dupes.
+Checks for duplicate entries in the dictionary so that they can either be merged or removed. Execute this script in the console while viewing the [dictionary](https://studyresources.jp/studyresources/lessons/appendix/dictionary/) to check for any dupes.
 
 Considering how huge it is, we may end up making duplicate entries from time to time. So this script helps ensure the dictionary word count stays accurate, while delegating the tedious job of checking to robots!
 
@@ -90,7 +90,6 @@ Considering how huge it is, we may end up making duplicate entries from time to 
 python3 anki_decks_maker.py <path_to_lessons_folder>
 
 # For example:
-python3 anki_decks_maker.py /lessons-3rd
 python3 anki_decks_maker.py /lessons
 ```
 
@@ -115,10 +114,9 @@ All of the decks created are currently available under the [decks](decks/) folde
 python3 wordlist_E-J.py <path_to_lessons_folder>
 
 # For example:
-python3 wordlist_E-J.py /lessons-3rd
 python3 wordlist_E-J.py /lessons
 ```
 
-You can also generate decks by executing `wordlist_E-J-run.bat` and typing either `2nd` or `3rd` to generate a deck for that edition.
+You can also generate decks by executing `wordlist_E-J-run.bat` and typing `3rd` to generate a deck for that edition.
 
 All of the lists created are currently available under the [wordlists_E-J](wordlists_E-J/) folder

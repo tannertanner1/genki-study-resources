@@ -1,5 +1,5 @@
 {
-  "name": "genki-study-resources",
+  "name": "studyresources",
   "private": true,
   "packageManager": "pnpm@9.15.0",
   "scripts": {

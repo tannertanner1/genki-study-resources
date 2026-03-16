@@ -15,14 +15,11 @@
   // prevents long winded conditions everytime we want to use storage
   window.storageOK = navigator.cookieEnabled && !offlineEdge && window.localStorage ? true : false
 
-  // current edition
-  window.GenkiEd = /lessons-3rd/.test(window.location.pathname) ? "3rd" : "2nd"
-
   // user language preference (either en or ja)
   window.GenkiLang = storageOK && localStorage.genkiLang ? localStorage.genkiLang : "en"
 
   // user's random exercise list
-  window.GenkiRandomList = storageOK && localStorage["genkiRandomList" + GenkiEd] ? JSON.parse(localStorage["genkiRandomList" + GenkiEd]) : []
+  window.GenkiRandomList = storageOK && localStorage["genkiRandomList3rd"] ? JSON.parse(localStorage["genkiRandomList3rd"]) : []
 
   // # GENKI MODAL #
   // creates a modal or closes one
@@ -165,11 +162,11 @@
   window.getPaths = function () {
     var path = window.location.pathname
 
-    if (/\/lessons\/|\/lessons-3rd\/.*?\//.test(path)) {
+    if (/\/lessons\/|\/lessons\/.*?\//.test(path)) {
       return "/"
     } else if (/\/help\/.*?\//.test(path)) {
       return "/"
-    } else if (/\/lessons-3rd(\/|$)|\/report\/|\/download\/|\/donate\/|\/privacy\/|\/help\/(index|$)/.test(path)) {
+    } else if (/\/lessons(\/|$)|\/report\/|\/download\/|\/donate\/|\/privacy\/|\/help\/(index|$)/.test(path)) {
       return "/"
     } else {
       return ""
@@ -547,12 +544,12 @@
         reader = new FileReader()
 
       reader.onload = function (e) {
-        if (/"3rd"\:|"2nd"\:/.test(e.target.result)) {
+        if (/"3rd"\:/.test(e.target.result)) {
           localStorage.Results = e.target.result
 
           alert(GenkiLang == "ja" ? "練習データが成功にロードしました。得点データをアップデートするためにページをリロードしてください。" : "Exercise score data has been loaded successfully! Please reload the page to update your scores.")
         } else {
-          alert(GenkiLang == "ja" ? "エラーが発生しました。やり直してみてください。またエラーが発生しましたらGitHubで連絡してください：https://github.com/SethClydesdale/genki-study-resources/issues" : "There was an error loading the exercise score data. Please try again or open a new issue on GitHub for help: https://github.com/SethClydesdale/genki-study-resources/issues")
+          alert(GenkiLang == "ja" ? "エラーが発生しました。やり直してみてください。またエラーが発生しましたらGitHubで連絡してください：https://github.com/tannertanner1/studyresources/issues" : "There was an error loading the exercise score data. Please try again or open a new issue on GitHub for help: https://github.com/tannertanner1/studyresources/issues")
         }
       }
 
@@ -1144,9 +1141,7 @@
               '<span tabindex="0" class="genki_pseudo_checkbox" onclick="this.previousSibling.click();" onkeypress="event.key == \'Enter\' && this.previousSibling.click();"></span>' +
               '<a href="' +
               getPaths() +
-              "lessons" +
-              (GenkiEd == "3rd" ? "-3rd" : "") +
-              "/" +
+              "lessons/" +
               data[0] +
               "/" +
               (window.location.protocol == "file:" ? "index.html" : "") +
@@ -1168,7 +1163,7 @@
       // load exercise data
       if (!window.GenkiExercises) {
         var exercises = document.createElement("SCRIPT")
-        exercises.src = getPaths() + "resources/javascript/exercises/" + (/lessons-3rd/.test(window.location.pathname) ? "3rd" : "2nd") + "-ed.min.js"
+        exercises.src = getPaths() + "resources/javascript/exercises/exercises.min.js"
         exercises.onload = parseExercises
         document.body.appendChild(exercises)
       } else {
@@ -1197,7 +1192,7 @@
       }
 
       // save selected exercises to local storage
-      localStorage["genkiRandomList" + GenkiEd] = JSON.stringify(GenkiRandomList)
+      localStorage["genkiRandomList3rd"] = JSON.stringify(GenkiRandomList)
     },
 
     // clears the random exercise list
@@ -1428,7 +1423,7 @@
   // # LIMITED MODE WARNING #
   // If cookies are blocked, Genki Study Resources will run in limited mode. Settings are not remembered in this mode and certain features, such as dark mode, are unavailable.
   if (!navigator.cookieEnabled) {
-    console.warn("Cookies are not available either due to host or browser settings. Genki Study Resources will function in limited mode where settings are not remembered and certain features are unavailable. This issue can commonly be resolved by enabling third-party cookies. Please see the following page for help.\nhttps://sethclydesdale.github.io/genki-study-resources/help/stuck-loading/\n\nIf the issue still occurs after enabling third-party cookies, please contact the developer for further assistance.\nhttps://github.com/SethClydesdale/genki-study-resources/issues")
+    console.warn("Cookies are not available either due to host or browser settings. Genki Study Resources will function in limited mode where settings are not remembered and certain features are unavailable. This issue can commonly be resolved by enabling third-party cookies. Please see the following page for help.\nhttps://studyresources.jp/studyresources/help/stuck-loading/\n\nIf the issue still occurs after enabling third-party cookies, please contact the developer for further assistance.\nhttps://github.com/tannertanner1/studyresources/issues")
   }
 
   // AJAX page getter

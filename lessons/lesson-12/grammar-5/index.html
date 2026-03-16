@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: ～ので - Lesson 12 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: ～ので - Lesson 12 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: ～ので - Lesson 12 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: ～ので - Lesson 12 | Genki Study Resources - 2nd Edition">
+    <title>Practice: ～ので - Lesson 12 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: ～ので - Lesson 12 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: ～ので - Lesson 12 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: ～ので - Lesson 12 | Genki Study Resources - 3rd Edition">
     <meta name="description" content="Connect the two sentences using ～ので.">
     <meta property="og:description" content="Connect the two sentences using ～ので.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki I, page 281, problem IV-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki I, page 287, problem IV-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-12/grammar-5/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-12/grammar-5/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,116 +55,194 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      format : 'practice',
+      type : ['multi', 'fill'],
       info : 'Connect the two sentences using {!GRI|～ので|l12-p4}.',
 
       quizlet : [
-        {
-          question : 'いい天気です／散歩します',
-          answers : [
-            'Aいい天気なので、散歩します。',
-            'いい天気ので、散歩します。',
-            'いい天気だったので、散歩します。'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          {
+            question : 'いい<ruby>天気<rt>てんき</rt></ruby>です／<ruby>散歩<rt>さんぽ</rt></ruby>します',
+            answers : [
+              'Aいい<ruby>天気<rt>てんき</rt></ruby>なので、<ruby>散歩<rt>さんぽ</rt></ruby>します。',
+              'いい<ruby>天気<rt>てんき</rt></ruby>ので、<ruby>散歩<rt>さんぽ</rt></ruby>します。',
+              'いい<ruby>天気<rt>てんき</rt></ruby>だったので、<ruby>散歩<rt>さんぽ</rt></ruby>します。',
+              'いい<ruby>天気<rt>てんき</rt></ruby>だので、<ruby>散歩<rt>さんぽ</rt></ruby>します。'
+            ]
+          },
 
-        {
-          question : '安いです／買います',
-          answers : [
-            'A安いので、買います。',
-            '安いなので、買います。',
-            '安かったので、買います。'
-          ]
-        },
+          {
+            question : '<ruby>安<rt>やす</rt></ruby>いです／<ruby>買<rt>か</rt></ruby>います',
+            answers : [
+              'A<ruby>安<rt>やす</rt></ruby>いので、<ruby>買<rt>か</rt></ruby>います。',
+              '<ruby>安<rt>やす</rt></ruby>いなので、<ruby>買<rt>か</rt></ruby>います。',
+              '<ruby>安<rt>やす</rt></ruby>かったので、<ruby>買<rt>か</rt></ruby>います。',
+              '<ruby>安<rt>やす</rt></ruby>くないので、<ruby>買<rt>か</rt></ruby>います。'
+            ]
+          },
 
-        {
-          question : 'あの映画はおもしろくないです／見たくないです',
-          answers : [
-            'Aあの映画はおもしろくないので、見たくないです。',
-            'あの映画はおもしろかったので、見たくないです。',
-            'あの映画はおもしろくなかったので、見たくないです。'
-          ]
-        },
+          {
+            question : 'あの<ruby>授業<rt>じゅぎょう</rt></ruby>はおもしろくないです／サボりたいです',
+            answers : [
+              'Aあの<ruby>授業<rt>じゅぎょう</rt></ruby>はおもしろくないので、サボりたいです。',
+              'あの<ruby>授業<rt>じゅぎょう</rt></ruby>はおもしろかったので、サボりたいです。',
+              'あの<ruby>授業<rt>じゅぎょう</rt></ruby>はおもしろくなかったので、サボりたいです。',
+              'あの<ruby>授業<rt>じゅぎょう</rt></ruby>はおもしろいので、サボりたいです。'
+            ]
+          },
 
-        {
-          question : '今週は忙しかったです／疲れています',
-          answers : [
-            'A今週は忙しかったので、疲れています。',
-            '今週は忙しだったので、疲れています。',
-            '今週は忙しいので、疲れています。'
-          ]
-        },
+          {
+            question : '<ruby>今週<rt>こんしゅう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しかったです／<ruby>疲<rt>つか</rt></ruby>れています',
+            answers : [
+              'A<ruby>今週<rt>こんしゅう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しかったので、<ruby>疲<rt>つか</rt></ruby>れています。',
+              '<ruby>今週<rt>こんしゅう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しだったので、<ruby>疲<rt>つか</rt></ruby>れています。',
+              '<ruby>今週<rt>こんしゅう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しいので、<ruby>疲<rt>つか</rt></ruby>れています。',
+              '<ruby>今週<rt>こんしゅう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しくないので、<ruby>疲<rt>つか</rt></ruby>れています。'
+            ]
+          },
 
-        {
-          question : '病気でした／授業を休みました',
-          answers : [
-            'A病気だったので、授業を休みました。',
-            '病気なので、授業を休みました。',
-            '病気かったので、授業を休みました。'
-          ]
-        },
+          {
+            question : 'かぜでした／バイトを<ruby>休<rt>やす</rt></ruby>みました',
+            answers : [
+              'Aかぜだったので、バイトを<ruby>休<rt>やす</rt></ruby>みました。',
+              'かぜなので、バイトを<ruby>休<rt>やす</rt></ruby>みました。',
+              'かぜかったので、バイトを<ruby>休<rt>やす</rt></ruby>みました。',
+              'かぜでしたので、バイトを<ruby>休<rt>やす</rt></ruby>みました。'
+            ]
+          },
 
-        {
-          question : '彼女はいつも親切です／人気があります',
-          answers : [
-            'A彼女はいつも親切なので、人気があります。',
-            '彼女はいつも親切ので、人気があります。',
-            '彼女はいつも親切だったので、人気があります。'
-          ]
-        },
+          {
+            question : '<ruby>彼女<rt>かのじょ</rt></ruby>はいつも<ruby>親切<rt>しんせつ</rt></ruby>です／<ruby>人気<rt>にんき</rt></ruby>があります',
+            answers : [
+              'A<ruby>彼女<rt>かのじょ</rt></ruby>はいつも<ruby>親切<rt>しんせつ</rt></ruby>なので、<ruby>人気<rt>にんき</rt></ruby>があります。',
+              '<ruby>彼女<rt>かのじょ</rt></ruby>はいつも<ruby>親切<rt>しんせつ</rt></ruby>ので、<ruby>人気<rt>にんき</rt></ruby>があります。',
+              '<ruby>彼女<rt>かのじょ</rt></ruby>はいつも<ruby>親切<rt>しんせつ</rt></ruby>だったので、<ruby>人気<rt>にんき</rt></ruby>があります。',
+              '<ruby>彼女<rt>かのじょ</rt></ruby>はいつも<ruby>親切<rt>しんせつ</rt></ruby>ですので、<ruby>人気<rt>にんき</rt></ruby>があります。'
+            ]
+          },
 
-        {
-          question : '政治に興味がありません／新聞を読みません',
-          answers : [
-            'A政治に興味がないので、新聞を読みません。',
-            '政治に興味があらないので、新聞を読みません。',
-            '政治に興味があるので、新聞を読みません。'
-          ]
-        },
+          {
+            question : '<ruby>政治<rt>せいじ</rt></ruby>に<ruby>興味<rt>きょうみ</rt></ruby>がありません／<ruby>新聞<rt>しんぶん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みません',
+            answers : [
+              'A<ruby>政治<rt>せいじ</rt></ruby>に<ruby>興味<rt>きょうみ</rt></ruby>がないので、<ruby>新聞<rt>しんぶん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みません。',
+              '<ruby>政治<rt>せいじ</rt></ruby>に<ruby>興味<rt>きょうみ</rt></ruby>があらないので、<ruby>新聞<rt>しんぶん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みません。',
+              '<ruby>政治<rt>せいじ</rt></ruby>に<ruby>興味<rt>きょうみ</rt></ruby>があるので、<ruby>新聞<rt>しんぶん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みません。',
+              '<ruby>政治<rt>せいじ</rt></ruby>に<ruby>興味<rt>きょうみ</rt></ruby>がありませんので、<ruby>新聞<rt>しんぶん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みません。'
+            ]
+          },
 
-        {
-          question : 'あしたテストがあります／勉強します',
-          answers : [
-            'Aあしたテストがあるので、勉強します。',
-            'あしたテストがあったので、勉強します。',
-            'あしたテストがないので、勉強します。'
-          ]
-        },
+          {
+            question : '<ruby>友<rt>とも</rt></ruby>だちと<ruby>同<rt>おな</rt></ruby>じ<ruby>授業<rt>じゅぎょう</rt></ruby>を<ruby>取<rt>と</rt></ruby>っています／<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>します',
+            answers : [
+              'A<ruby>友<rt>とも</rt></ruby>だちと<ruby>同<rt>おな</rt></ruby>じ<ruby>授業<rt>じゅぎょう</rt></ruby>を<ruby>取<rt>と</rt></ruby>っているので、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>します。',
+              '<ruby>友<rt>とも</rt></ruby>だちと<ruby>同<rt>おな</rt></ruby>じ<ruby>授業<rt>じゅぎょう</rt></ruby>を<ruby>取<rt>と</rt></ruby>っていたので、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>します。',
+              '<ruby>友<rt>とも</rt></ruby>だちと<ruby>同<rt>おな</rt></ruby>じ<ruby>授業<rt>じゅぎょう</rt></ruby>を<ruby>取<rt>と</rt></ruby>っていないので、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>します。',
+              '<ruby>友<rt>とも</rt></ruby>だちと<ruby>同<rt>おな</rt></ruby>じ<ruby>授業<rt>じゅぎょう</rt></ruby>を<ruby>取<rt>と</rt></ruby>っていてので、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>します。'
+            ]
+          },
 
-        {
-          question : 'のどがかわきました／ジュースが飲みたいです',
-          answers : [
-            'Aのどがかわいたので、ジュースが飲みたいです。',
-            'のどがかわたので、ジュースが飲みたいです。',
-            'のどがかわいだので、ジュースが飲みたいです。'
-          ]
-        },
+          {
+            question : 'のどがかわきました／ジュースが<ruby>飲<rt>の</rt></ruby>みたいです',
+            answers : [
+              'Aのどがかわいたので、ジュースが<ruby>飲<rt>の</rt></ruby>みたいです。',
+              'のどがかわたので、ジュースが<ruby>飲<rt>の</rt></ruby>みたいです。',
+              'のどがかわいだので、ジュースが<ruby>飲<rt>の</rt></ruby>みたいです。',
+              'のどがかわいてので、ジュースが<ruby>飲<rt>の</rt></ruby>みたいです。'
+            ]
+          },
 
-        {
-          question : '歩きすぎました／足が痛いです',
-          answers : [
-            'A歩きすぎたので、足が痛いです。',
-            '歩きすぎったので、足が痛いです。',
-            '歩きすぎいたので、足が痛いです。'
-          ]
-        }
+          {
+            question : '<ruby>歩<rt>ある</rt></ruby>きすぎました／<ruby>足<rt>あし</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです',
+            answers : [
+              'A<ruby>歩<rt>ある</rt></ruby>きすぎたので、<ruby>足<rt>あし</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。',
+              '<ruby>歩<rt>ある</rt></ruby>きすぎったので、<ruby>足<rt>あし</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。',
+              '<ruby>歩<rt>ある</rt></ruby>きすぎいたので、<ruby>足<rt>あし</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。',
+              '<ruby>歩<rt>ある</rt></ruby>きすぎるので、<ruby>足<rt>あし</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。'
+            ]
+          },
+
+          {
+            question : 'ホテルの<ruby>部屋<rt>へや</rt></ruby>は<ruby>広<rt>ひろ</rt></ruby>かったです／よかったです',
+            answers : [
+              'Aホテルの<ruby>部屋<rt>へや</rt></ruby>は<ruby>広<rt>ひろ</rt></ruby>かったので、よかったです。',
+              'ホテルの<ruby>部屋<rt>へや</rt></ruby>は<ruby>広<rt>ひろ</rt></ruby>かったですので、よかったです。',
+              'ホテルの<ruby>部屋<rt>へや</rt></ruby>は<ruby>広<rt>ひろ</rt></ruby>いので、よかったです。',
+              'ホテルの<ruby>部屋<rt>へや</rt></ruby>は<ruby>広<rt>ひろ</rt></ruby>いですので、よかったです。'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="example-problem">'+
+          '<div class="inner-problem">'+
+            'いい<ruby>天気<rt>てんき</rt></ruby>です／<ruby>散歩<rt>さんぽ</rt></ruby>します　<i class="fa">&#xf061;</i>　いい<ruby>天気<rt>てんき</rt></ruby>なので、<ruby>散歩<rt>さんぽ</rt></ruby>します。'+
+          '</div>'+
+        '</div>'+
+
+        '<div class="count-problems">'+
+          '<div class="problem">'+
+            '<ruby>安<rt>やす</rt></ruby>いです／<ruby>買<rt>か</rt></ruby>います<br>'+
+            '{安いので、買います|やすいので、かいます|' + Genki.getAlts('{安}いので、{買}います', 'やす|か') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'あの<ruby>授業<rt>じゅぎょう</rt></ruby>はおもしろくないです／サボりたいです<br>'+
+            '{あの授業はおもしろくないので、サボりたいです|あのじゅぎょうはおもしろくないので、サボりたいです|' + Genki.getAlts('あの{授業}は{おもしろ}くないので、{サボ}りたいです', 'じゅぎょう|面白|さぼ') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>今週<rt>こんしゅう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しかったです／<ruby>疲<rt>つか</rt></ruby>れています<br>'+
+            '{今週は忙しかったので、疲れています|こんしゅうはいそがしかったので、つかれています|' + Genki.getAlts('{今週}は{忙}しかったので、{疲}れています', 'こんしゅう|いそが|つか') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'かぜでした／バイトを<ruby>休<rt>やす</rt></ruby>みました<br>'+
+            '{かぜだったので、バイトを休みました|かぜだったので、バイトをやすみました|answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>彼女<rt>かのじょ</rt></ruby>はいつも<ruby>親切<rt>しんせつ</rt></ruby>です／<ruby>人気<rt>にんき</rt></ruby>があります<br>'+
+            '{彼女はいつも親切なので、人気があります|かのじょはいつもしんせつなので、にんきがあります|' + Genki.getAlts('{彼女}はいつも{親切}なので、{人気}があります', 'かのじょ|しんせつ|にんき') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>政治<rt>せいじ</rt></ruby>に<ruby>興味<rt>きょうみ</rt></ruby>がありません／<ruby>新聞<rt>しんぶん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みません<br>'+
+            '{政治に興味がないので、新聞を読みません|せいじにきょうみがないので、しんぶんをよみません|' + Genki.getAlts('{政治}に{興味}がないので、{新聞}を{読}みません', 'せいじ|きょうみ|しんぶん|よ') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>友<rt>とも</rt></ruby>だちと<ruby>同<rt>おな</rt></ruby>じ<ruby>授業<rt>じゅぎょう</rt></ruby>を<ruby>取<rt>と</rt></ruby>っています／<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>します<br>'+
+            '{友だちと同じ授業を取っているので、一緒に勉強します|ともだちとおなじじゅぎょうをとっているので、いっしょにべんきょうします|' + Genki.getAlts('{友}{だち}と{同}じ{授業}を{取}っているので、{一緒}に{勉強}します', 'とも|達|おな|じゅぎょう|と|いっしょ|べんきょう') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'のどがかわきました／ジュースが<ruby>飲<rt>の</rt></ruby>みたいです<br>'+
+            '{のどがかわいたので、ジュースが飲みたいです|のどがかわいたので、ジュースがのみたいです|answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            '<ruby>歩<rt>ある</rt></ruby>きすぎました／<ruby>足<rt>あし</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです<br>'+
+            '{歩きすぎたので、足が痛いです|あるきすぎたので、あしがいたいです|' + Genki.getAlts('{歩}きすぎたので、{足}が{痛}いです', 'ある|あし|いた') + 'answer}。'+
+          '</div>'+
+
+          '<div class="problem">'+
+            'ホテルの<ruby>部屋<rt>へや</rt></ruby>は<ruby>広<rt>ひろ</rt></ruby>かったです／よかったです<br>'+
+            '{ホテルの部屋は広かったので、よかったです|ホテルのへやはひろかったので、よかったです|' + Genki.getAlts('ホテルの{部屋}は{広}かったので、{よ}かったです', 'へや|ひろ|良') + 'answer}。'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>

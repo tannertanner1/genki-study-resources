@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Kanji Practice: Write the Readings - Lesson 13 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Kanji Practice: Write the Readings - Lesson 13 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Kanji Practice: Write the Readings - Lesson 13 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Kanji Practice: Write the Readings - Lesson 13 | Genki Study Resources - 2nd Edition">
-    <meta name="description" content="次の漢字の読み方を書きましょう。(Write the readings of the following kanji.)">
-    <meta property="og:description" content="次の漢字の読み方を書きましょう。(Write the readings of the following kanji.)">
+    <title>Kanji Vocabulary: 飯, 肉, and 悪 - Lesson 13 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Kanji Vocabulary: 飯, 肉, and 悪 - Lesson 13 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Kanji Vocabulary: 飯, 肉, and 悪 - Lesson 13 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Kanji Vocabulary: 飯, 肉, and 悪 - Lesson 13 | Genki Study Resources - 3rd Edition">
+    <meta name="description" content="Drag the English expression to the Japanese expression that has the same meaning.">
+    <meta property="og:description" content="Drag the English expression to the Japanese expression that has the same meaning.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II, Reading and Writing, page 278, problem I-A, problem I-B, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki II, Reading and Writing, page 274, page 275, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-13/literacy-6/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-13/literacy-6/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,55 +55,39 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'fill',
-      info : '次の漢字の読み方<span class="define">[かた；reading]</span>を書きましょう。(Write the readings of the following kanji.)',
+      format : 'vocab',
+      type : ['drag', 'multi', 'writing', 'fill'],
+      info : [Genki.lang.std_drag, Genki.lang.vocab_multi, Genki.lang.vocab_writing, Genki.lang.vocab_fill],
 
-      quizlet :
-      '<div class="columns-2 count-problems small-margin clear">'+
-        '<div>'+
-          '<div class="problem">国　　　{くに}</div>'+
-          '<div class="problem">気分　　{きぶん}</div>'+
-          '<div class="problem">一生　　{いっしょう}</div>'+
-          '<div class="problem">時　　　{とき}</div>'+
-          '<div class="problem">時々　　{ときどき}</div>'+
-          '<div class="problem">毎日　　{まいにち}</div>'+
-          '<div class="problem">ある日　{あるひ}</div>'+
-          '<div class="problem">一度　　{いちど}</div>'+
-          '<div class="problem">午後　　{ごご}</div>'+
-          '<div class="problem">待つ　　{まつ}</div>'+
-        '</div>'+
-
-        '<div>'+
-          '<div class="problem">会社員　　{かいしゃいん}</div>'+
-          '<div class="problem">住む　　　{すむ}</div>'+
-          '<div class="problem">電車の中　{でんしゃのなか}</div>'+
-          '<div class="problem">読む　　　{よむ}</div>'+
-          '<div class="problem">話す　　　{はなす}</div>'+
-          '<div class="problem">聞く　　　{きく}</div>'+
-          '<div class="problem">高校生　　{こうこうせい}</div>'+
-          '<div class="problem">次　　　　{つぎ}</div>'+
-          '<div class="problem">漢字　　　{かんじ}</div>'+
-          '<div class="problem">方　　　　{かた}</div>'+
-        '</div>'+
-      '</div>'
-
+      quizlet : {
+        // 飯
+        'ご飯|ごはん' : 'rice; meal',
+        '朝ご飯|あさごはん' : 'breakfast',
+        '昼ご飯|ひるごはん' : 'lunch',
+        '晩ご飯|ばんごはん' : 'dinner',
+        // 肉
+        '肉|にく' : 'meat',
+        '牛肉|ぎゅうにく' : 'beef',
+        '豚肉|ぶたにく' : 'pork',
+        '肉屋|にくや' : 'meat shop',
+        '筋肉|きんにく' : 'muscle',
+        // 悪
+        '悪い|わるい' : 'bad',
+        '気分が悪い|きぶんがわるい' : 'to feel sick',
+        '最悪|さいあく' : 'the worst',
+        '悪魔|あくま' : 'devil'
+      }
     });</script>
   </body>
 </html>

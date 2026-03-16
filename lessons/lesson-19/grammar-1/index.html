@@ -2,22 +2,22 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
   <head>
     <meta charset="UTF-8">
-    <title>Practice: Honorific Verbs 1 - Lesson 19 | Genki Study Resources - 2nd Edition</title>
-    <meta name="title" content="Practice: Honorific Verbs 1 - Lesson 19 | Genki Study Resources - 2nd Edition">
-    <meta name="twitter:title" content="Practice: Honorific Verbs 1 - Lesson 19 | Genki Study Resources - 2nd Edition">
-    <meta property="og:title" content="Practice: Honorific Verbs 1 - Lesson 19 | Genki Study Resources - 2nd Edition">
+    <title>Practice: Honorific Verbs 1 - Lesson 19 | Genki Study Resources - 3rd Edition</title>
+    <meta name="title" content="Practice: Honorific Verbs 1 - Lesson 19 | Genki Study Resources - 3rd Edition">
+    <meta name="twitter:title" content="Practice: Honorific Verbs 1 - Lesson 19 | Genki Study Resources - 3rd Edition">
+    <meta property="og:title" content="Practice: Honorific Verbs 1 - Lesson 19 | Genki Study Resources - 3rd Edition">
     <meta name="description" content="Change the following verbs into honorific expressions.">
     <meta property="og:description" content="Change the following verbs into honorific expressions.">
     <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
 
-    <meta name="keywords" content="Genki II, page 174, problem I-A, japanese, quizzes, exercises, 2nd Edition" lang="en">
+    <meta name="keywords" content="Genki II, page 170, problem I-A, japanese, quizzes, exercises, 3rd Edition" lang="en">
     <meta name="language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="/lessons/lesson-19/grammar-1/">
+    <meta property="og:url" content="https://studyresources.jp/lessons/lesson-19/grammar-1/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/resources/images/genki-thumb.png">
+    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@SethC1995">
 
@@ -28,9 +28,10 @@
 
   <body>
 
-    <header>
-      <h1><a href="/" id="home-link" class="edition-icon second-ed">Genki Study Resources</a></h1>
-      <a id="fork-me" href="https://github.com/SethClydesdale/genki-study-resources">Fork Me</a>
+    <header class="site-header">
+      <button type="button" class="icon-button" id="sidebar-nav-trigger" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/></svg></button>
+      <a href="/" id="home-link" class="site-title">Genki Study Resources</a>
+      <button type="button" class="icon-button" id="genki-site-settings" aria-label="Open settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
     </header>
 
     <div id="announcement">
@@ -54,226 +55,299 @@
       </div>
     </div>
 
-    <footer class="clear">
-      <ul class="footer-left">
-        <li><a href="/" id="footer-home">Home</a></li>
-        <li><a href="/help/">Help</a></li>
-      </ul>
-
-      <ul class="footer-right">
-        <li>Created by <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/genki-study-resources/graphs/contributors">GitHub Community</a></li>
-      </ul>
+    <footer class="site-footer footer--minimal">
+      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">/studyresources</a>
+      <button type="button" class="icon-button" id="theme-btn" aria-label="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/></svg></button>
     </footer>
 
     <script src="/resources/javascript/dragula.min.js"></script>
     <script src="/resources/javascript/easytimer.min.js"></script>
-    <script src="/resources/javascript/exercises/2nd-ed.min.js"></script>
+    <script src="/resources/javascript/exercises/exercises.min.js"></script>
     <script src="/resources/javascript/genki.min.js"></script>
     <script src="/resources/javascript/all.min.js"></script>
     <script>Genki.generateQuiz({
-      type : 'multi',
+      format : 'practice',
+      type : ['multi', 'fill'],
       info : 'Change the following verbs into {!GRI|honorific expressions|l19-p1}.',
 
       quizlet : [
-        // (a)
-        {
-          question : '行く',
-          answers : [
-            'Aいらっしゃる',
-            'おっしゃる',
-            'なさる'
-          ]
-        },
+        [
+          // MULTIPLE CHOICE
+          // (a)
+          {
+            question : '<ruby>行<rt>い</rt></ruby>く',
+            answers : [
+              'Aいらっしゃる',
+              'おっしゃる',
+              'なさる',
+              'くださる'
+            ]
+          },
 
-        {
-          question : '食べる',
-          answers : [
-            'A召し上がる',
-            'ご覧になる',
-            'お休みになる'
-          ]
-        },
+          {
+            question : '<ruby>食<rt>た</rt></ruby>べる',
+            answers : [
+              'A<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がる',
+              'ご<ruby>覧<rt>らん</rt></ruby>になる',
+              'お<ruby>休<rt>やす</rt></ruby>みになる',
+              'いらっしゃる'
+            ]
+          },
 
-        {
-          question : '言う',
-          answers : [
-            'Aおっしゃる',
-            'いらっしゃる',
-            'くださる'
-          ]
-        },
+          {
+            question : '<ruby>言<rt>い</rt></ruby>う',
+            answers : [
+              'Aおっしゃる',
+              'いらっしゃる',
+              'くださる',
+              'なさる'
+            ]
+          },
 
-        {
-          question : 'いる',
-          answers : [
-            'Aいらっしゃる',
-            'おっしゃる',
-            'なさる'
-          ]
-        },
+          {
+            question : 'いる',
+            answers : [
+              'Aいらっしゃる',
+              'おっしゃる',
+              'なさる',
+              'くださる'
+            ]
+          },
 
-        {
-          question : 'する',
-          answers : [
-            'Aなさる',
-            'いらっしゃる',
-            'くださる'
-          ]
-        },
+          {
+            question : 'する',
+            answers : [
+              'Aなさる',
+              'いらっしゃる',
+              'くださる',
+              'おっしゃる'
+            ]
+          },
 
-        {
-          question : '寝る',
-          answers : [
-            'Aお休みになる',
-            '召し上がる',
-            'ご覧になる'
-          ]
-        },
+          {
+            question : '<ruby>寝<rt>ね</rt></ruby>る',
+            answers : [
+              'Aお<ruby>休<rt>やす</rt></ruby>みになる',
+              '<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がる',
+              'ご<ruby>覧<rt>らん</rt></ruby>になる',
+              'いらっしゃる'
+            ]
+          },
 
-        {
-          question : '来る',
-          answers : [
-            'Aいらっしゃる',
-            'おっしゃる',
-            'なさる'
-          ]
-        },
+          {
+            question : '<ruby>来<rt>く</rt></ruby>る',
+            answers : [
+              'Aいらっしゃる',
+              'おっしゃる',
+              'なさる',
+              'くださる'
+            ]
+          },
 
-        {
-          question : '見る',
-          answers : [
-            'Aご覧になる',
-            '召し上がる',
-            'お休みになる'
-          ]
-        },
+          {
+            question : '<ruby>見<rt>み</rt></ruby>る',
+            answers : [
+              'Aご<ruby>覧<rt>らん</rt></ruby>になる',
+              '<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がる',
+              'お<ruby>休<rt>やす</rt></ruby>みになる',
+              'いらっしゃる'
+            ]
+          },
 
-        {
-          question : '飲む',
-          answers : [
-            'A召し上がる',
-            'ご覧になる',
-            'お休みになる'
-          ]
-        },
+          {
+            question : '<ruby>飲<rt>の</rt></ruby>む',
+            answers : [
+              'A<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がる',
+              'ご<ruby>覧<rt>らん</rt></ruby>になる',
+              'お<ruby>休<rt>やす</rt></ruby>みになる',
+              'いらっしゃる'
+            ]
+          },
 
-        {
-          question : '住んでいる',
-          answers : [
-            'A住んでいらっしゃる',
-            '住んでくださる',
-            '住んでおっしゃる'
-          ]
-        },
+          {
+            question : '<ruby>住<rt>す</rt></ruby>んでいる',
+            answers : [
+              'A<ruby>住<rt>す</rt></ruby>んでいらっしゃる',
+              '<ruby>住<rt>す</rt></ruby>んでくださる',
+              '<ruby>住<rt>す</rt></ruby>んでおっしゃる',
+              '<ruby>住<rt>す</rt></ruby>んでなさる'
+            ]
+          },
 
-        {
-          question : '読んでいる',
-          answers : [
-            'A読んでいらっしゃる',
-            '読んでくださる',
-            '読んでなさる'
-          ]
-        },
+          {
+            question : '<ruby>結婚<rt>けっこん</rt></ruby>している',
+            answers : [
+              'A<ruby>結婚<rt>けっこん</rt></ruby>していらっしゃる',
+              '<ruby>結婚<rt>けっこん</rt></ruby>してくださる',
+              '<ruby>結婚<rt>けっこん</rt></ruby>してなさる',
+              '<ruby>結婚<rt>けっこん</rt></ruby>しておっしゃる'
+            ]
+          },
 
-        {
-          question : 'くれる',
-          answers : [
-            'Aくださる',
-            'いらっしゃる',
-            'なさる'
-          ]
-        },
+          {
+            question : 'くれる',
+            answers : [
+              'Aくださる',
+              'いらっしゃる',
+              'なさる',
+              'おっしゃる'
+            ]
+          },
 
-        // (b)
-        {
-          question : '歌う',
-          answers : [
-            'Aお歌いになる',
-            'お歌うになる',
-            'お歌ったになる'
-          ]
-        },
+          // (b)
+          {
+            question : '<ruby>歌<rt>うた</rt></ruby>う',
+            answers : [
+              'Aお<ruby>歌<rt>うた</rt></ruby>いになる',
+              'お<ruby>歌<rt>うた</rt></ruby>うになる',
+              'お<ruby>歌<rt>うた</rt></ruby>ったになる',
+              'お<ruby>歌<rt>うた</rt></ruby>ってになる'
+            ]
+          },
 
-        {
-          question : 'わかる',
-          answers : [
-            'Aおわかりになる',
-            'おわかるになる',
-            'おわかったになる'
-          ]
-        },
+          {
+            question : 'わかる',
+            answers : [
+              'Aおわかりになる',
+              'おわかるになる',
+              'おわかったになる',
+              'おわかってになる'
+            ]
+          },
 
-        {
-          question : '調べる',
-          answers : [
-            'Aお調べになる',
-            'お調べるになる',
-            'お調べりになる'
-          ]
-        },
+          {
+            question : '<ruby>調<rt>しら</rt></ruby>べる',
+            answers : [
+              'Aお<ruby>調<rt>しら</rt></ruby>べになる',
+              'お<ruby>調<rt>しら</rt></ruby>べるになる',
+              'お<ruby>調<rt>しら</rt></ruby>べりになる',
+              'お<ruby>調<rt>しら</rt></ruby>べたになる'
+            ]
+          },
 
-        {
-          question : '読む',
-          answers : [
-            'Aお読みになる',
-            'お読むになる',
-            'お読んだになる'
-          ]
-        },
+          {
+            question : '<ruby>読<rt>よ</rt></ruby>む',
+            answers : [
+              'Aお<ruby>読<rt>よ</rt></ruby>みになる',
+              'お<ruby>読<rt>よ</rt></ruby>むになる',
+              'お<ruby>読<rt>よ</rt></ruby>んだになる',
+              'お<ruby>読<rt>よ</rt></ruby>んでになる'
+            ]
+          },
 
-        {
-          question : '聞く',
-          answers : [
-            'Aお聞きになる',
-            'お聞くになる',
-            'お聞いたになる'
-          ]
-        },
+          {
+            question : '<ruby>聞<rt>き</rt></ruby>く',
+            answers : [
+              'Aお<ruby>聞<rt>き</rt></ruby>きになる',
+              'お<ruby>聞<rt>き</rt></ruby>くになる',
+              'お<ruby>聞<rt>き</rt></ruby>いたになる',
+              'お<ruby>聞<rt>き</rt></ruby>いてになる'
+            ]
+          },
 
-        {
-          question : '座る',
-          answers : [
-            'Aお座りになる',
-            'お座るになる',
-            'お座になる'
-          ]
-        },
+          {
+            question : '<ruby>座<rt>すわ</rt></ruby>る',
+            answers : [
+              'Aお<ruby>座<rt>すわ</rt></ruby>りになる',
+              'お<ruby>座<rt>すわ</rt></ruby>るになる',
+              'お<ruby>座<rt>すわ</rt></ruby>になる',
+              'お<ruby>座<rt>すわ</rt></ruby>ったになる'
+            ]
+          },
 
-        {
-          question : '立つ',
-          answers : [
-            'Aお立ちになる',
-            'お立つになる',
-            'お立ったになる'
-          ]
-        },
+          {
+            question : '<ruby>立<rt>た</rt></ruby>つ',
+            answers : [
+              'Aお<ruby>立<rt>た</rt></ruby>ちになる',
+              'お<ruby>立<rt>た</rt></ruby>つになる',
+              'お<ruby>立<rt>た</rt></ruby>ったになる',
+              'お<ruby>立<rt>た</rt></ruby>ってになる'
+            ]
+          },
 
-        {
-          question : '乗る',
-          answers : [
-            'Aお乗りになる',
-            'お乗るになる',
-            'お乗になる'
-          ]
-        },
+          {
+            question : '<ruby>乗<rt>の</rt></ruby>る',
+            answers : [
+              'Aお<ruby>乗<rt>の</rt></ruby>りになる',
+              'お<ruby>乗<rt>の</rt></ruby>るになる',
+              'お<ruby>乗<rt>の</rt></ruby>になる',
+              'お<ruby>乗<rt>の</rt></ruby>ったになる'
+            ]
+          },
 
-        {
-          question : '入る',
-          answers : [
-            'Aお入りになる',
-            'お入るになる',
-            'お入になる'
-          ]
-        },
+          {
+            question : '<ruby>入<rt>はい</rt></ruby>る',
+            answers : [
+              'Aお<ruby>入<rt>はい</rt></ruby>りになる',
+              'お<ruby>入<rt>はい</rt></ruby>るになる',
+              'お<ruby>入<rt>はい</rt></ruby>になる',
+              'お<ruby>入<rt>はい</rt></ruby>ったになる'
+            ]
+          },
 
-        {
-          question : '待つ',
-          answers : [
-            'Aお待ちになる',
-            'お待つになる',
-            'お待ったになる'
-          ]
-        }
+          {
+            question : '<ruby>待<rt>ま</rt></ruby>つ',
+            answers : [
+              'Aお<ruby>待<rt>ま</rt></ruby>ちになる',
+              'お<ruby>待<rt>ま</rt></ruby>つになる',
+              'お<ruby>待<rt>ま</rt></ruby>ったになる',
+              'お<ruby>待<rt>ま</rt></ruby>ってになる'
+            ]
+          },
+
+          {
+            question : '<ruby>似合<rt>にあ</rt></ruby>う',
+            answers : [
+              'Aお<ruby>似合<rt>にあ</rt></ruby>いになる',
+              'お<ruby>似合<rt>にあ</rt></ruby>うになる',
+              'お<ruby>似合<rt>にあ</rt></ruby>ったになる',
+              'お<ruby>似合<rt>にあ</rt></ruby>ってになる'
+            ]
+          }
+        ],
+
+
+        // WRITTEN
+        '<div class="columns-2 valign-top clear">'+
+          '<div class="count-problems">'+
+            '<p class="sectionDesc3rd"><span class="sectionNumber3rd">A</span>Special honorific verbs</p>'+
+            '<div class="example-problem">'+
+              '<div class="inner-problem">'+
+                '<ruby>行<rt>い</rt></ruby>く　<i class="fa">&#xf061;</i>　いらっしゃる'+
+              '</div>'+
+            '</div>'+
+            '<div class="problem"><ruby>食<rt>た</rt></ruby>べる　<i class="fa">&#xf061;</i>　{召し上がる|めしあがる|answer}</div>'+
+            '<div class="problem"><ruby>言<rt>い</rt></ruby>う　<i class="fa">&#xf061;</i>　{おっしゃる}</div>'+
+            '<div class="problem">いる　<i class="fa">&#xf061;</i>　{いらっしゃる}</div>'+
+            '<div class="problem">する　<i class="fa">&#xf061;</i>　{なさる}</div>'+
+            '<div class="problem"><ruby>寝<rt>ね</rt></ruby>る　<i class="fa">&#xf061;</i>　{お休みになる|おやすみになる|answer}</div>'+
+            '<div class="problem"><ruby>来<rt>く</rt></ruby>る　<i class="fa">&#xf061;</i>　{いらっしゃる}</div>'+
+            '<div class="problem"><ruby>見<rt>み</rt></ruby>る　<i class="fa">&#xf061;</i>　{ご覧になる|ごらんになる|answer}</div>'+
+            '<div class="problem"><ruby>飲<rt>の</rt></ruby>む　<i class="fa">&#xf061;</i>　{召し上がる|めしあがる|answer}</div>'+
+            '<div class="problem"><ruby>住<rt>す</rt></ruby>んでいる　<i class="fa">&#xf061;</i>　{住んでいらっしゃる|すんでいらっしゃる|answer}</div>'+
+            '<div class="problem"><ruby>結婚<rt>けっこん</rt></ruby>している　<i class="fa">&#xf061;</i>　{結婚していらっしゃる|けっこんしていらっしゃる|answer}</div>'+
+            '<div class="problem">くれる　<i class="fa">&#xf061;</i>　{くださる}</div>'+
+          '</div>'+
+
+          '<div class="count-problems">'+
+            '<p class="sectionDesc3rd"><span class="sectionNumber3rd">B</span>お～になる</p>'+
+            '<div class="example-problem">'+
+              '<div class="inner-problem">'+
+                '<ruby>歌<rt>うた</rt></ruby>う　<i class="fa">&#xf061;</i>　お<ruby>歌<rt>うた</rt></ruby>いになる'+
+              '</div>'+
+            '</div>'+
+            '<div class="problem">わかる　<i class="fa">&#xf061;</i>　{お分かりになる|おわかりになる|answer}</div>'+
+            '<div class="problem"><ruby>調<rt>しら</rt></ruby>べる　<i class="fa">&#xf061;</i>　{お調べになる|おしらべになる|answer}</div>'+
+            '<div class="problem"><ruby>読<rt>よ</rt></ruby>む　<i class="fa">&#xf061;</i>　{お読みになる|およみになる|answer}</div>'+
+            '<div class="problem"><ruby>聞<rt>き</rt></ruby>く　<i class="fa">&#xf061;</i>　{お聞きになる|おききになる|answer}</div>'+
+            '<div class="problem"><ruby>座<rt>すわ</rt></ruby>る　<i class="fa">&#xf061;</i>　{お座りになる|おすわりになる|answer}</div>'+
+            '<div class="problem"><ruby>立<rt>た</rt></ruby>つ　<i class="fa">&#xf061;</i>　{お立ちになる|おたちになる|answer}</div>'+
+            '<div class="problem"><ruby>乗<rt>の</rt></ruby>る　<i class="fa">&#xf061;</i>　{お乗りになる|おのりになる|answer}</div>'+
+            '<div class="problem"><ruby>入<rt>はい</rt></ruby>る　<i class="fa">&#xf061;</i>　{お入りになる|おはいりになる|answer}</div>'+
+            '<div class="problem"><ruby>待<rt>ま</rt></ruby>つ　<i class="fa">&#xf061;</i>　{お待ちになる|おまちになる|answer}</div>'+
+            '<div class="problem"><ruby>似合<rt>にあ</rt></ruby>う　<i class="fa">&#xf061;</i>　{お似合いになる|おにあいになる|answer}</div>'+
+          '</div>'+
+        '</div>'
       ]
     });</script>
   </body>
