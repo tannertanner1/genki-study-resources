@@ -208,7 +208,7 @@
       // handles switching and conversion of exercises
       if (typeof o.type === "object") {
         // the `begin` query in the URL determines the exercise to immediately start (without popup confirmation)
-        // example: https://studyresources.jp/studyresources/lessons/lesson-4/vocab-1/?begin=1 (this starts multiple choice, 0 would start drag and drop)
+        // example: https://studyresources.jp/lessons/lesson-4/vocab-1/?begin=1 (this starts multiple choice, 0 would start drag and drop)
         // `begin` or `start` may be used equally, whichever is preferred.
         var begin = /(?:begin|start)=\d/.test(window.location.search) ? window.location.search.replace(/.*?(?:begin|start)=(\d).*/, "$1") : false,
           i = 0,
@@ -2600,7 +2600,7 @@
         frag.appendChild(selector)
         document.body.appendChild(frag)
         var footerRight = document.querySelector(".footer-right")
-        footerRight.style.marginRight = "40px" // offset footer so texts are visible
+        if (footerRight) footerRight.style.marginRight = "40px"
 
         // node cache
         Genki.quickJisho.cache = {

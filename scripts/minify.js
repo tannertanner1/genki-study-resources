@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
  * Minify source .js files to their .min.js counterparts.
- * Only updates a .min.js when its source is newer (or .min doesn't exist).
+ * A .min.js is updated when minified(source) !== existing .min.js (content-based, not mtime).
  *
  * Commands:
- *   pnpm run minified   — list each .min.js and report how many are up to date (X / Y files minified)
- *   pnpm run minify     — minify outdated sources, list each file updated, then total
+ * pnpm run minified — list each .min.js and report how many match regenerated output
+ * pnpm run minify — write .min.js only where output would change (or file missing)
  */
 
 const fs = require("fs")
@@ -14,6 +14,12 @@ const { minify } = require("terser")
 
 const ROOT = path.resolve(__dirname, "..")
 const IS_STATUS = process.argv.includes("--status") || process.argv[2] === "status"
+
+const TERSER_OPTS = {
+  compress: true,
+  mangle: true,
+  format: { comments: false },
+}
 
 // Source .js → .min.js (paths relative to project root)
 const PAIRS = [
@@ -25,21 +31,29 @@ const PAIRS = [
   ["resources/javascript/exercises/exercises.js", "resources/javascript/exercises/exercises.min.js"],
 ]
 
-function needsUpdate(srcPath, minPath) {
-  if (!fs.existsSync(srcPath)) return false
-  if (!fs.existsSync(minPath)) return true
-  const srcMtime = fs.statSync(srcPath).mtimeMs
-  const minMtime = fs.statSync(minPath).mtimeMs
-  return srcMtime > minMtime
+async function minifySource(srcPath) {
+  if (!fs.existsSync(srcPath)) return { ok: false, reason: "missing" }
+  const code = fs.readFileSync(srcPath, "utf8")
+  const result = await minify(code, TERSER_OPTS)
+  if (result.error) return { ok: false, reason: "terser", error: result.error }
+  return { ok: true, code: result.code }
 }
 
-function statusReport() {
+/** True when .min.js exists and equals minified source. */
+async function minMatchesSource(srcPath, minPath) {
+  const out = await minifySource(srcPath)
+  if (!out.ok) return false
+  if (!fs.existsSync(minPath)) return false
+  return fs.readFileSync(minPath, "utf8") === out.code
+}
+
+async function statusReport() {
   const total = PAIRS.length
   let minifiedCount = 0
   for (const [srcRel, minRel] of PAIRS) {
     const srcPath = path.join(ROOT, srcRel)
     const minPath = path.join(ROOT, minRel)
-    const upToDate = fs.existsSync(srcPath) && !needsUpdate(srcPath, minPath)
+    const upToDate = await minMatchesSource(srcPath, minPath)
     if (upToDate) minifiedCount++
     console.log(`${upToDate ? "✓" : "✗"} ${minRel}`)
   }
@@ -51,20 +65,18 @@ async function runMinify() {
   for (const [srcRel, minRel] of PAIRS) {
     const srcPath = path.join(ROOT, srcRel)
     const minPath = path.join(ROOT, minRel)
-    if (!needsUpdate(srcPath, minPath)) continue
-    const code = fs.readFileSync(srcPath, "utf8")
-    const result = await minify(code, {
-      compress: true,
-      mangle: true,
-      format: { comments: false },
-    })
-    if (result.error) {
-      console.error("Terser error for", srcRel, result.error)
+    const out = await minifySource(srcPath)
+    if (out.reason === "missing") continue
+    if (!out.ok) {
+      console.error("Terser error for", srcRel, out.error)
       process.exitCode = 1
       continue
     }
+    const newCode = out.code
+    const existing = fs.existsSync(minPath) ? fs.readFileSync(minPath, "utf8") : null
+    if (existing === newCode) continue
     fs.mkdirSync(path.dirname(minPath), { recursive: true })
-    fs.writeFileSync(minPath, result.code, "utf8")
+    fs.writeFileSync(minPath, newCode, "utf8")
     console.log(minRel)
     updated++
   }
@@ -73,7 +85,7 @@ async function runMinify() {
 
 async function run() {
   if (IS_STATUS) {
-    statusReport()
+    await statusReport()
     return
   }
   await runMinify()

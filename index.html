@@ -3,478 +3,662 @@
   <head>
     <meta charset="UTF-8" />
     <title>studyresources.jp</title>
-    <meta name="description" content="Study resources." />
+    <meta name="description" content="A convenient way to study Japanese." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-      body {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 14px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background: #fff;
-        color: #111;
-        transition: background 0.15s, color 0.15s;
-      }
-
-      body.dark {
-        background: #111;
-        color: #eee;
-      }
-
-      header {
-        display: flex;
-        align-items: center;
-        padding: 8px 16px;
-        position: relative;
-        border-bottom: 1px solid #e5e5e5;
-      }
-
-      body.dark header {
-        border-bottom-color: #333;
-      }
-
-      .site-title {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        font-weight: 600;
-        letter-spacing: 0.01em;
-        pointer-events: none;
-      }
-
-      main {
-        flex: 1;
-        padding: 32px 16px;
-      }
-
-      footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 8px 16px;
-        border-top: 1px solid #e5e5e5;
-      }
-
-      body.dark footer {
-        border-top-color: #333;
-      }
-
-      button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        color: #111;
-        display: flex;
-        align-items: center;
-        line-height: 1;
-        transition: color 0.1s;
-      }
-
-      button:hover { color: #999; }
-
-      body.dark button { color: #eee; }
-      body.dark button:hover { color: #888; }
-
-      .ml-auto { margin-left: auto; }
-
-      a {
-        color: #737373;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.1s;
-      }
-
-      a:hover { color: #999; }
-
-      body.dark a { color: #eee; }
-      body.dark a:hover { color: #888; }
-
-      .muted { color: #999; }
-      body.dark .muted { color: #888; }
-    </style>
-  </head>
-  <body>
-
-    <header>
-      <!-- Sidebar nav trigger — IconLayoutSidebarFilled (Tabler) -->
-      <button type="button" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M0 0h24v24H0z" fill="none"/>
-          <path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"/>
-        </svg>
-      </button>
-
-      <span class="site-title">studyresources.jp</span>
-
-      <!-- Settings dialog trigger — MoreHorizontal (Lucide) -->
-      <button type="button" aria-label="Open settings" class="ml-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="5"  cy="12" r="1"/>
-          <circle cx="12" cy="12" r="1"/>
-          <circle cx="19" cy="12" r="1"/>
-        </svg>
-      </button>
-    </header>
-
-    <main>
-      <p class="muted"></p>
-    </main>
-
-    <footer>
-      <a href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer">
-        /studyresources
-      </a>
-
-      <!-- Theme toggle — IconBrightnessFilled (Tabler) -->
-      <button type="button" aria-label="Toggle theme" id="theme-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M0 0h24v24H0z" fill="none"/>
-          <path d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"/>
-        </svg>
-      </button>
-    </footer>
-
-    <script>
-      document.getElementById('theme-btn').addEventListener('click', function () {
-        document.body.classList.toggle('dark');
-      });
-    </script>
-
-  </body>
-</html>
-
-<!--
-// @note v2
-<!doctype html>
-<html lang="en" class="lang-en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Genki Exercises - 3rd Edition | Genki Study Resources</title>
-    <meta
-      name="description"
-      content="Genki Study Resources offers a vast collection of exercises for practicing what is taught in Genki: An Integrated Course in Elementary Japanese."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="./resources/images/genkico.ico"
-    />
-
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <style>
       :root {
-        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #111111;
+        --muted: #777777;
+        --active: #222222;
+        --line: #e1e1e1;
+        --surface: #ffffff;
+        --inset-bg: #f5f5f5;
+        --radius: 10px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
 
       body {
-        margin: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          sans-serif;
-        font-size: 14px;
-        color: #111;
-        background: #fff;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: var(--inset-bg);
+        color: var(--fg);
+        transition: background-color 0.08s linear, color 0.08s linear;
       }
 
-      .dark-mode body {
-        color: #eee;
-        background: #111;
+      body.dark-mode {
+        --bg: #111111;
+        --fg: #ececec;
+        --muted: #9a9a9a;
+        --active: #f2f2f2;
+        --line: #2a2d33;
+        --surface: #181818;
+        --inset-bg: #111111;
       }
 
-      a {
-        color: #0366d6;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      /* HEADER */
+      /* ── Header ── */
 
       .site-header {
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: 220px auto 1fr;
+        column-gap: 8px;
+        align-items: center;
+        height: 40px;
+        padding: 0 8px;
+        background: var(--inset-bg);
+        transition: background-color 0.08s linear;
+      }
+
+      .header-left {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-        padding: 0.75rem 1.25rem;
-        background: transparent;
+        gap: 2px;
       }
 
-      .site-title {
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        text-decoration: none;
-        color: inherit;
+      .header-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2px;
       }
 
-      .icon-button {
+      #random-exercise-btn {
+        margin-left: auto;
+      }
+
+      .site-header.collapsed {
+        grid-template-columns: auto 1fr;
+      }
+
+      .site-header.collapsed .header-left {
+        display: none;
+      }
+
+      .sidebar-logo {
+        width: 28px;
+        height: 28px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 32px;
-        height: 32px;
-        border-radius: 999px;
-        border: none;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.12s ease;
+      }
+
+      .sidebar-logo:hover {
+        color: var(--active);
+      }
+
+      .sidebar-logo-mark {
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: currentColor;
+        -webkit-mask: url('/icon.svg') center / contain no-repeat;
+        mask: url('/icon.svg') center / contain no-repeat;
+      }
+
+      .icon-button,
+      .icon-link {
+        width: 28px;
+        height: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
         background: transparent;
+        color: var(--muted);
+        text-decoration: none;
         cursor: pointer;
-        color: inherit;
-        padding: 0;
+        outline: none;
+        box-shadow: none;
+        transition: color 0.12s ease;
       }
 
-      .icon-button:hover {
-        background: rgba(0, 0, 0, 0.04);
+      .icon-button:hover,
+      .icon-link:hover {
+        color: var(--active);
       }
 
-      .icon-button:focus-visible {
-        outline: 2px solid #f93;
-        outline-offset: 2px;
+      .icon-button:focus,
+      .icon-button:focus-visible,
+      .icon-link:focus,
+      .icon-link:focus-visible {
+        outline: none;
+        box-shadow: none;
       }
 
-      .icon-button svg {
-        width: 22px;
-        height: 22px;
+      .icon-button svg,
+      .icon-link svg {
+        width: 18px;
+        height: 18px;
         display: block;
       }
 
-      /* LAYOUT */
+      /* ── Inset layout ── */
 
-      main {
-        flex: 1 0 auto;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 1.5rem 1.25rem 2.5rem;
+      .inset-wrapper {
+        display: flex;
+        gap: 8px;
+        padding: 0 8px 8px;
+        height: calc(100vh - 40px);
       }
 
-      /* FOOTER */
+      .sidebar-card {
+        width: 220px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        transition: background-color 0.08s linear, border-color 0.08s linear;
+      }
 
-      .site-footer {
+      .sidebar-card.hidden {
+        display: none;
+      }
+
+      .sidebar-head {
+        display: none;
+      }
+
+      .sidebar-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 8px;
+      }
+
+      .sidebar-lessons {
+        display: grid;
+        gap: 1px;
+      }
+
+      .lesson-item {
+        border: 0;
+      }
+
+      .lesson-item summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 8px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--fg);
+        cursor: pointer;
+        list-style: none;
+        transition: background-color 0.1s ease;
+      }
+
+      .lesson-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .lesson-item summary:hover {
+        background: color-mix(in srgb, var(--fg) 6%, transparent);
+      }
+
+      .lesson-item summary .chevron {
+        width: 14px;
+        height: 14px;
+        color: var(--muted);
+        transition: transform 0.15s ease;
         flex-shrink: 0;
       }
 
-      .site-footer.footer--minimal {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1px solid rgba(0, 0, 0, 0.12);
-        padding: 0.75rem 1.25rem;
-        background: transparent;
-        color: #333;
-        font-size: 13px;
-      }
-
-      .site-footer.footer--minimal a {
-        color: inherit;
-        opacity: 0.85;
-      }
-
-      .site-footer.footer--minimal a:hover {
-        opacity: 1;
-      }
-
-      .site-footer .footer-right {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .footer-theme-icon {
-        display: inline-flex;
-        transition: transform 0.2s ease;
-      }
-
-      .footer-theme-icon svg {
-        width: 22px;
-        height: 22px;
-      }
-
-      /* rotate theme icon in dark mode */
-      .dark-mode .footer-theme-icon {
+      .lesson-item[open] summary .chevron {
         transform: rotate(180deg);
       }
 
-      @media (max-width: 640px) {
-        .site-header,
-        .site-footer.footer--minimal,
-        main {
-          padding-inline: 0.75rem;
+      .lesson-item .lesson-content {
+        padding: 2px 0 4px 12px;
+      }
+
+      .lesson-item .lesson-content a {
+        display: block;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-size: 12px;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.1s ease, background-color 0.1s ease;
+      }
+
+      .lesson-item .lesson-content a:hover {
+        color: var(--fg);
+        background: color-mix(in srgb, var(--fg) 5%, transparent);
+      }
+
+      .main-card {
+        flex: 1;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow-y: auto;
+        transition: background-color 0.08s linear, border-color 0.08s linear;
+      }
+
+      /* ── Quick dictionary ── */
+
+      #quick-dict-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 80;
+        display: none;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 52px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      #quick-dict-overlay.open {
+        display: flex;
+      }
+
+      #quick-dict-dialog {
+        width: min(680px, calc(100% - 20px));
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--surface);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      }
+
+      #quick-dict-input {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid var(--line);
+        background: transparent;
+        color: var(--fg);
+        font-size: 16px;
+        padding: 14px 16px;
+        outline: none;
+      }
+
+      #quick-dict-input::placeholder {
+        color: var(--muted);
+      }
+
+      #quick-dict-results {
+        max-height: 52vh;
+        overflow: auto;
+      }
+
+      .result-item {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .result-item:last-child {
+        border-bottom: 0;
+      }
+
+      .result-ja {
+        font-size: 16px;
+        color: var(--active);
+      }
+
+      .result-en {
+        margin-top: 3px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      /* ── Mobile ── */
+
+      @media (max-width: 768px) {
+        .site-header {
+          grid-template-columns: auto 1fr;
         }
 
-        .site-footer.footer--minimal {
+        .header-left {
+          display: none !important;
+        }
+
+        .sidebar-card {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 70;
+          width: min(280px, 86vw);
+          height: 100dvh;
+          background: var(--inset-bg);
+          border: 0;
+          border-radius: 0;
+          transform: translateX(-100%);
+          transition: transform 0.2s ease;
+        }
+
+        .sidebar-card.hidden {
+          display: flex;
+        }
+
+        .sidebar-card.open {
+          transform: translateX(0);
+        }
+
+        .sidebar-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: sticky;
+          top: 0;
+          z-index: 2;
+          height: 40px;
+          padding: 0 10px;
+          background: var(--inset-bg);
+          flex-shrink: 0;
+        }
+
+        .sidebar-head-right {
+          display: inline-flex;
+          align-items: center;
+          gap: 2px;
+        }
+
+        .sidebar-body {
+          flex: 1;
+          overflow: hidden;
+          padding: 0 8px 8px;
+          display: flex;
           flex-direction: column;
-          align-items: flex-start;
-          gap: 0.5rem;
+        }
+
+        .sidebar-tree-card {
+          flex: 1;
+          background: var(--surface);
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          overflow-y: auto;
+          padding: 8px;
+        }
+
+        .sidebar-tree-card .sidebar-lessons {
+          padding: 0;
+        }
+
+        .inset-wrapper {
+          padding: 0 8px 8px;
+        }
+
+        .main-card {
+          width: 100%;
+        }
+
+        #sidebar-overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 60;
+          background: rgba(0, 0, 0, 0.3);
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.2s ease;
+        }
+
+        #sidebar-overlay.open {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      @media (min-width: 769px) {
+        #sidebar-overlay {
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto;
+        }
+
+        .site-header,
+        .icon-button,
+        .icon-link,
+        .sidebar-card,
+        #sidebar-overlay {
+          transition: none;
         }
       }
     </style>
   </head>
-
   <body>
     <header class="site-header">
-      <button
-        class="icon-button header-left-toggle"
-        type="button"
-        aria-label="Toggle navigation"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zM18 5h-8v14h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1"
-          />
-        </svg>
+      <div class="header-left">
+        <a href="/" class="sidebar-logo" aria-label="Home">
+          <span class="sidebar-logo-mark" aria-hidden="true"></span>
+        </a>
+        <button id="random-exercise-btn" class="icon-button" type="button" aria-label="Random exercise">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M11.106 2.553a1 1 0 0 1 1.788 0l2.851 5.701l5.702 2.852a1 1 0 0 1 .11 1.725l-.11.063l-5.702 2.851l-2.85 5.702a1 1 0 0 1-1.726.11l-.063-.11l-2.852-5.702l-5.701-2.85a1 1 0 0 1-.11-1.726l.11-.063l5.701-2.852z" /></svg>
+        </button>
+        <a href="/help/" class="icon-button" aria-label="Help">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 3.34a10 10 0 1 1-10 17.32a10 10 0 0 1 10-17.32m-5 12.66a1 1 0 0 0-.993.883l-.007.127a1 1 0 0 0 1.993.117l.007-.127a1 1 0 0 0-1-1m1.173-9.856a3.6 3.6 0 0 0-3.97 1.252a1 1 0 0 0 1.512 1.304l.082-.096a1.6 1.6 0 1 1 1.846 2.462a2.49 2.49 0 0 0-1.641 2.49a1 1 0 0 0 1.996.004v-.117a.5.5 0 0 1 .259-.466l.075-.034a3.61 3.61 0 0 0 2.338-3.47a3.6 3.6 0 0 0-2.497-3.329" /></svg>
+        </a>
+        <button id="settings-btn" class="icon-button" type="button" aria-label="Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.647 4.081a.724.724 0 0 0 1.08.448c2.439-1.485 5.23 1.305 3.745 3.744a.724.724 0 0 0 .447 1.08c2.775.673 2.775 4.62 0 5.294a.724.724 0 0 0-.448 1.08c1.485 2.439-1.305 5.23-3.744 3.745a.724.724 0 0 0-1.08.447c-.673 2.775-4.62 2.775-5.294 0a.724.724 0 0 0-1.08-.448c-2.439 1.485-5.23-1.305-3.745-3.744a.724.724 0 0 0-.447-1.08c-2.775-.673-2.775-4.62 0-5.294a.724.724 0 0 0 .448-1.08c-1.485-2.439 1.305-5.23 3.744-3.745a.722.722 0 0 0 1.08-.447c.673-2.775 4.62-2.775 5.294 0zm-2.647 4.919a3 3 0 1 0 0 6a3 3 0 0 0 0-6" /></svg>
+        </button>
+      </div>
+
+      <button id="sidebar-toggle" class="icon-button" type="button" aria-label="Toggle sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6" /><path d="M9 4v16" /></svg>
       </button>
 
-      <a href="/" class="site-title">Genki Study Resources</a>
-
-      <button
-        class="icon-button header-right-toggle"
-        type="button"
-        aria-label="Open settings"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zm8-16H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8z"
-          />
-        </svg>
-      </button>
+      <div class="header-right">
+        <button id="quick-jisho-btn" class="icon-button" type="button" aria-label="Search dictionary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0" /><path d="M21 21l-6-6" /></svg>
+        </button>
+        <a class="icon-link" href="https://github.com/tannertanner1/studyresources" target="_blank" rel="noopener noreferrer" aria-label="Source code">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" /><path d="m21 3-9 9" /><path d="M15 3h6v6" /></svg>
+        </a>
+        <button id="theme-btn" class="icon-button" type="button" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0" /><path d="M12 3v18" /></svg>
+        </button>
+      </div>
     </header>
 
-    <main>
-      <p>
-        This is a minimal shell page showing the new header and footer layout.
-      </p>
-    </main>
+    <div class="inset-wrapper">
+      <aside id="sidebar-card" class="sidebar-card">
+        <div class="sidebar-head">
+          <a href="/" class="sidebar-logo" aria-label="Home">
+            <span class="sidebar-logo-mark" aria-hidden="true"></span>
+          </a>
+          <div class="sidebar-head-right">
+            <button class="icon-button" type="button" aria-label="Random exercise">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M11.106 2.553a1 1 0 0 1 1.788 0l2.851 5.701l5.702 2.852a1 1 0 0 1 .11 1.725l-.11.063l-5.702 2.851l-2.85 5.702a1 1 0 0 1-1.726.11l-.063-.11l-2.852-5.702l-5.701-2.85a1 1 0 0 1-.11-1.726l.11-.063l5.701-2.852z" /></svg>
+            </button>
+            <a href="/help/" class="icon-button" aria-label="Help">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 3.34a10 10 0 1 1-10 17.32a10 10 0 0 1 10-17.32m-5 12.66a1 1 0 0 0-.993.883l-.007.127a1 1 0 0 0 1.993.117l.007-.127a1 1 0 0 0-1-1m1.173-9.856a3.6 3.6 0 0 0-3.97 1.252a1 1 0 0 0 1.512 1.304l.082-.096a1.6 1.6 0 1 1 1.846 2.462a2.49 2.49 0 0 0-1.641 2.49a1 1 0 0 0 1.996.004v-.117a.5.5 0 0 1 .259-.466l.075-.034a3.61 3.61 0 0 0 2.338-3.47a3.6 3.6 0 0 0-2.497-3.329" /></svg>
+            </a>
+            <button class="icon-button" type="button" aria-label="Settings">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14.647 4.081a.724.724 0 0 0 1.08.448c2.439-1.485 5.23 1.305 3.745 3.744a.724.724 0 0 0 .447 1.08c2.775.673 2.775 4.62 0 5.294a.724.724 0 0 0-.448 1.08c1.485 2.439-1.305 5.23-3.744 3.745a.724.724 0 0 0-1.08.447c-.673 2.775-4.62 2.775-5.294 0a.724.724 0 0 0-1.08-.448c-2.439 1.485-5.23-1.305-3.745-3.744a.724.724 0 0 0-.447-1.08c-2.775-.673-2.775-4.62 0-5.294a.724.724 0 0 0 .448-1.08c-1.485-2.439 1.305-5.23 3.744-3.745a.722.722 0 0 0 1.08-.447c.673-2.775 4.62-2.775 5.294 0zm-2.647 4.919a3 3 0 1 0 0 6a3 3 0 0 0 0-6" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="sidebar-body">
+          <div class="sidebar-tree-card">
+            <div class="sidebar-lessons">
+            <details class="lesson-item"><summary>Lesson 0 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-0/vocab-1/">Vocabulary</a><a href="/lessons/lesson-0/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 1 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-1/vocab-1/">Vocabulary</a><a href="/lessons/lesson-1/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 2 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-2/vocab-1/">Vocabulary</a><a href="/lessons/lesson-2/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 3 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-3/vocab-1/">Vocabulary</a><a href="/lessons/lesson-3/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 4 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-4/vocab-1/">Vocabulary</a><a href="/lessons/lesson-4/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 5 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-5/vocab-1/">Vocabulary</a><a href="/lessons/lesson-5/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 6 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-6/vocab-1/">Vocabulary</a><a href="/lessons/lesson-6/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 7 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-7/vocab-1/">Vocabulary</a><a href="/lessons/lesson-7/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 8 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-8/vocab-1/">Vocabulary</a><a href="/lessons/lesson-8/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 9 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-9/vocab-1/">Vocabulary</a><a href="/lessons/lesson-9/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 10 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-10/vocab-1/">Vocabulary</a><a href="/lessons/lesson-10/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 11 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-11/vocab-1/">Vocabulary</a><a href="/lessons/lesson-11/grammar-1/">Grammar</a></div></details>
+            <details class="lesson-item"><summary>Lesson 12 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lesson-content"><a href="/lessons/lesson-12/vocab-1/">Vocabulary</a><a href="/lessons/lesson-12/grammar-1/">Grammar</a></div></details>
+            </div>
+          </div>
+        </div>
+      </aside>
 
-    <footer class="site-footer footer--minimal">
-      <div class="footer-left">
-        <a
-          href="https://github.com/tannertanner1/studyresources"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          /studyresources
-        </a>
+      <main id="main-card" class="main-card"></main>
+    </div>
+
+    <div id="sidebar-overlay"></div>
+
+    <div id="quick-dict-overlay" role="dialog" aria-modal="true" aria-label="Quick dictionary">
+      <div id="quick-dict-dialog">
+        <input id="quick-dict-input" type="text" placeholder="Search Japanese or English..." autocomplete="off" />
+        <div id="quick-dict-results"></div>
       </div>
-
-      <div class="footer-right" id="footer-controls">
-        <button
-          class="icon-button theme-toggle"
-          type="button"
-          aria-label="Toggle theme"
-          id="theme-toggle"
-        >
-          <span class="footer-theme-icon" aria-hidden="true">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M8 5.072A8 8 0 0 0 12.001 20L12 4a8 8 0 0 0-4 1.072"
-              />
-            </svg>
-          </span>
-        </button>
-
-        <button
-          class="icon-button footer-settings"
-          type="button"
-          aria-label="Open settings"
-          id="footer-settings"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3zm8-16H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8z"
-            />
-          </svg>
-        </button>
-      </div>
-    </footer>
+    </div>
 
     <script>
-      // naive theme toggle for v0
       (function () {
-        var root = document.documentElement;
-        var btn = document.getElementById("theme-toggle");
-        if (!btn) return;
+        var root = document.documentElement
+        var header = document.querySelector(".site-header")
+        var themeBtn = document.getElementById("theme-btn")
+        var sidebarToggle = document.getElementById("sidebar-toggle")
+        var sidebarCard = document.getElementById("sidebar-card")
+        var sidebarOverlay = document.getElementById("sidebar-overlay")
+        var dictBtn = document.getElementById("quick-jisho-btn")
+        var dictOverlay = document.getElementById("quick-dict-overlay")
+        var dictInput = document.getElementById("quick-dict-input")
+        var dictResults = document.getElementById("quick-dict-results")
+        var loadingJisho = false
+        var isMobile = function () { return window.innerWidth <= 768 }
 
-        btn.addEventListener("click", function () {
-          root.classList.toggle("dark-mode");
-        });
+        function storageAvailable() {
+          try {
+            localStorage.setItem("__test__", "1")
+            localStorage.removeItem("__test__")
+            return true
+          } catch (err) {
+            return false
+          }
+        }
 
-        // settings buttons are just placeholders for now
-        document
-          .querySelectorAll("#footer-settings, .header-right-toggle")
-          .forEach(function (el) {
-            el.addEventListener("click", function () {
-              // TODO: hook into your real settings modal / sidebar
-              // alert("Settings coming soon");
-            });
-          });
-      })();
+        function applyTheme() {
+          var darkOn = storageAvailable() && localStorage.darkMode == "on"
+          root.classList.toggle("dark-mode", darkOn)
+          document.body.classList.toggle("dark-mode", darkOn)
+        }
+
+        function toggleTheme() {
+          if (storageAvailable()) {
+            localStorage.darkMode = localStorage.darkMode == "on" ? "off" : "on"
+            applyTheme()
+          } else {
+            var darkOn = !document.body.classList.contains("dark-mode")
+            root.classList.toggle("dark-mode", darkOn)
+            document.body.classList.toggle("dark-mode", darkOn)
+          }
+        }
+
+        function toggleSidebar() {
+          if (isMobile()) {
+            var open = !sidebarCard.classList.contains("open")
+            sidebarCard.classList.toggle("open", open)
+            sidebarOverlay.classList.toggle("open", open)
+          } else {
+            var hiding = !sidebarCard.classList.contains("hidden")
+            sidebarCard.classList.toggle("hidden", hiding)
+            header.classList.toggle("collapsed", hiding)
+          }
+        }
+
+        function closeMobileSidebar() {
+          sidebarCard.classList.remove("open")
+          sidebarOverlay.classList.remove("open")
+        }
+
+        function escapeHtml(value) {
+          return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;")
+        }
+
+        function loadJisho(callback) {
+          window.Genki = window.Genki || {}
+          if (Genki.jisho) { callback(); return }
+          if (loadingJisho) return
+          loadingJisho = true
+          var script = document.createElement("script")
+          script.src = "/resources/javascript/jisho.min.js"
+          script.onload = function () { loadingJisho = false; callback() }
+          script.onerror = function () {
+            loadingJisho = false
+            dictResults.innerHTML = '<div class="result-item"><div class="result-en">Dictionary failed to load.</div></div>'
+          }
+          document.body.appendChild(script)
+        }
+
+        function renderResults(query) {
+          if (!window.Genki || !Genki.jisho) {
+            dictResults.innerHTML = '<div class="result-item"><div class="result-en">Loading dictionary...</div></div>'
+            return
+          }
+          if (!query) {
+            dictResults.innerHTML = '<div class="result-item"><div class="result-en">Type to search.</div></div>'
+            return
+          }
+          var q = query.toLowerCase(), html = "", hits = 0
+          for (var key in Genki.jisho) {
+            if (!Object.prototype.hasOwnProperty.call(Genki.jisho, key)) continue
+            var rows = Genki.jisho[key]
+            for (var i = 0; i < rows.length; i++) {
+              var row = rows[i], ja = row.ja || "", en = row.en || ""
+              var v = row.v ? " [" + row.v + "]" : ""
+              if ((ja + " " + en).toLowerCase().indexOf(q) == -1) continue
+              html += '<div class="result-item"><div class="result-ja">' + escapeHtml(ja) + '</div><div class="result-en">' + escapeHtml(en + v) + "</div></div>"
+              if (++hits >= 30) break
+            }
+            if (hits >= 30) break
+          }
+          dictResults.innerHTML = html || '<div class="result-item"><div class="result-en">No results.</div></div>'
+        }
+
+        function openDictionary() {
+          dictOverlay.classList.add("open")
+          dictInput.value = ""
+          dictInput.focus()
+          loadJisho(function () { renderResults(dictInput.value.trim()) })
+        }
+
+        function closeDictionary() {
+          dictOverlay.classList.remove("open")
+        }
+
+        themeBtn.addEventListener("click", toggleTheme)
+        sidebarToggle.addEventListener("click", toggleSidebar)
+        sidebarOverlay.addEventListener("click", closeMobileSidebar)
+        dictBtn.addEventListener("click", openDictionary)
+        dictOverlay.addEventListener("click", function (e) {
+          if (e.target === dictOverlay) closeDictionary()
+        })
+        dictInput.addEventListener("input", function () { renderResults(this.value.trim()) })
+        document.addEventListener("keydown", function (e) {
+          if (e.key == "Escape") {
+            closeDictionary()
+            closeMobileSidebar()
+          }
+        })
+
+        applyTheme()
+      })()
     </script>
   </body>
-</html> -->
-
-<!--
-// @note v1
-<!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-  <head>
-    <meta charset="UTF-8">
-    <title>Genki Study Resources</title>
-    <meta name="description" content="Genki Study Resources offers a vast collection of exercises for practicing what is taught in Genki: An Integrated Course in Elementary Japanese.">
-    <meta property="og:title" content="Genki Exercises - 3rd Edition | Genki Study Resources">
-    <meta property="og:description" content="Genki Study Resources offers a vast collection of exercises for practicing what is taught in Genki: An Integrated Course in Elementary Japanese.">
-    <meta property="og:site_name" content="Genki Study Resources">
-    <meta property="og:url" content="https://studyresources.jp/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://studyresources.jp/resources/images/genki-thumb.png">
-    <meta name="twitter:card" content="summary">
-    <link rel="shortcut icon" type="image/x-icon" href="/resources/images/genkico.ico">
-    <meta http-equiv="refresh" content="0;url=/lessons/">
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      html, body { height: 100%; overflow: hidden; }
-      body {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        background: #fff;
-      }
-      img {
-        display: block;
-        width: 100%;
-        max-width: 1280px;
-        height: auto;
-        object-fit: contain;
-        object-position: bottom center;
-      }
-    </style>
-  </head>
-  <body>
-    <img src="/public/placeholder.svg" alt="Loading Genki Study Resources">
-  </body>
-</html> -->
+</html>

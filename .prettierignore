@@ -1,6 +1,5 @@
 /_private/
 /.pnpm-store/
 node_modules/
-
 javascript/**/*
 lessons/**/*

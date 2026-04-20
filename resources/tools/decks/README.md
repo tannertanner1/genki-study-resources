@@ -5,7 +5,7 @@ This folder contains [Anki](https://apps.ankiweb.net/) decks for Genki 3rd Editi
 
 ## How to Download the Decks
 
-You can download the decks from [here](https://studyresources.jp/studyresources/help/anki-decks/). The instructions below are for downloading from GitHub.
+You can download the decks from [here](https://studyresources.jp/help/anki-decks/). The instructions below are for downloading from GitHub.
 
 To download a single deck, you can go to an edition's folder, click the deck, and then download it via the download button.
 
